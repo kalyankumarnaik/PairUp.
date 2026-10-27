@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: pairup-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: pairup_user
+      POSTGRES_PASSWORD: pairup_secure_pass
+      POSTGRES_DB: pairup_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U pairup_user -d pairup_db']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: pairup-redis
+    restart: always
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.api
+    container_name: pairup-api
+    restart: always
+    ports:
+      - '4000:4000'
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://pairup_user:pairup_secure_pass@postgres:5432/pairup_db?schema=public
+      REDIS_URL: redis://redis:6379
+      JWT_ACCESS_SECRET: pairup_prod_secret_access_min32chars_long!
+      JWT_REFRESH_SECRET: pairup_prod_secret_refresh_min32chars_long!
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.web
+    container_name: pairup-web
+    restart: always
+    ports:
+      - '3000:80'
+    depends_on:
+      - api
+
+  worker:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile.worker
+    container_name: pairup-worker
+    restart: always
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://pairup_user:pairup_secure_pass@postgres:5432/pairup_db?schema=public
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:

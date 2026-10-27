@@ -1,0 +1,859 @@
+// ==============================================================================
+// PAIRUP AI - ENTERPRISE PRISMA DATABASE SCHEMA
+// Production-grade PostgreSQL Schema with PostGIS compatibility
+// ==============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------------------------------------------------
+// ENUMS
+// ------------------------------------------------------------------------------
+
+enum AccountStatus {
+  PENDING_VERIFICATION
+  ACTIVE
+  PAUSED
+  SUSPENDED
+  DELETED
+}
+
+enum UserRole {
+  USER
+  MODERATOR
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum Gender {
+  WOMAN
+  MAN
+  NON_BINARY
+  OTHER
+  PREFER_NOT_TO_SAY
+}
+
+enum RelationshipIntention {
+  LONG_TERM
+  CASUAL
+  DATING_TO_MARRY
+  NEW_FRIENDS
+  ACTIVITY_PARTNER
+  NOT_SURE_YET
+}
+
+enum ConnectionMode {
+  DATING
+  FRIENDSHIP
+  BOTH
+}
+
+enum VerificationStatus {
+  UNVERIFIED
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum SwipeAction {
+  LIKE
+  PASS
+  SUPER_LIKE
+}
+
+enum MatchStatus {
+  ACTIVE
+  UNMATCHED
+  BLOCKED
+}
+
+enum MessageType {
+  TEXT
+  IMAGE
+  VOICE_NOTE
+  ICEBREAKER
+  SYSTEM
+}
+
+enum MessageStatus {
+  SENDING
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+enum CallType {
+  VOICE
+  VIDEO
+}
+
+enum CallStatus {
+  INITIATED
+  RINGING
+  CONNECTED
+  DECLINED
+  MISSED
+  ENDED
+  FAILED
+}
+
+enum VoiceRoomRole {
+  HOST
+  MODERATOR
+  SPEAKER
+  LISTENER
+}
+
+enum EventStatus {
+  SCHEDULED
+  ONGOING
+  COMPLETED
+  CANCELLED
+}
+
+enum ReportCategory {
+  HARASSMENT
+  INAPPROPRIATE_CONTENT
+  SPAM
+  FAKE_PROFILE
+  UNDERAGE
+  OFFENSIVE_LANGUAGE
+  SCAM
+}
+
+enum ReportStatus {
+  PENDING
+  INVESTIGATING
+  RESOLVED
+  DISMISSED
+}
+
+enum ModerationActionType {
+  WARNING
+  CONTENT_REMOVED
+  SHADOWBAN
+  TEMPORARY_SUSPENSION
+  PERMANENT_BAN
+}
+
+enum SubscriptionTier {
+  FREE
+  PLUS
+  GOLD
+  PLATINUM
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+// ------------------------------------------------------------------------------
+// CORE USERS & SESSIONS
+// ------------------------------------------------------------------------------
+
+model User {
+  id               String        @id @default(uuid())
+  email            String?       @unique
+  phone            String?       @unique
+  passwordHash     String
+  isEmailVerified  Boolean       @default(false)
+  isPhoneVerified  Boolean       @default(false)
+  isAdultVerified  Boolean       @default(false)
+  role             UserRole      @default(USER)
+  status           AccountStatus @default(PENDING_VERIFICATION)
+  lastLoginAt      DateTime?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  // Relationships
+  profile               Profile?
+  sessions              UserSession[]
+  devices               Device[]
+  preferences           UserPreference?
+  location              UserLocation?
+  locationPreference    LocationPreference?
+  consentRecords        ConsentRecord[]
+  likesSent             Like[]                 @relation("LikesSent")
+  likesReceived         Like[]                 @relation("LikesReceived")
+  discoveryDecisions    DiscoveryDecision[]
+  matchesAsUser1        Match[]                @relation("MatchUser1")
+  matchesAsUser2        Match[]                @relation("MatchUser2")
+  conversationMembers   ConversationMember[]
+  messagesSent          Message[]
+  messageReactions      MessageReaction[]
+  callsAsCaller         Call[]                 @relation("Caller")
+  callsAsReceiver       Call[]                 @relation("Receiver")
+  callParticipants      CallParticipant[]
+  blocksMade            Block[]                @relation("Blocker")
+  blocksReceived        Block[]                @relation("Blocked")
+  reportsFiled          Report[]               @relation("Reporter")
+  reportsReceived       Report[]               @relation("ReportedUser")
+  verificationRequests  VerificationRequest[]
+  communityMembers      CommunityMember[]
+  voiceRoomsHosted      VoiceRoom[]            @relation("VoiceRoomHost")
+  voiceRoomMembers      VoiceRoomMember[]
+  eventsOrganized       Event[]                @relation("EventOrganizer")
+  eventRegistrations    EventRegistration[]
+  notifications         Notification[]
+  notificationPref      NotificationPreference?
+  subscriptions         Subscription[]
+  supportTickets        SupportTicket[]
+
+  @@index([status])
+  @@index([email])
+  @@index([phone])
+}
+
+model UserSession {
+  id               String   @id @default(uuid())
+  userId           String
+  refreshTokenHash String
+  userAgent        String?
+  ipAddress        String?
+  deviceId         String?
+  expiresAt        DateTime
+  createdAt        DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([refreshTokenHash])
+}
+
+model Device {
+  id          String   @id @default(uuid())
+  userId      String
+  pushToken   String?
+  platform    String   // android, ios, web
+  deviceModel String?
+  osVersion   String?
+  lastActive  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// ------------------------------------------------------------------------------
+// PROFILES & PHOTOS
+// ------------------------------------------------------------------------------
+
+model Profile {
+  id                    String                @id @default(uuid())
+  userId                String                @unique
+  displayName           String
+  birthDate             DateTime
+  bio                   String?
+  gender                Gender
+  pronouns              String?
+  relationshipIntention RelationshipIntention @default(LONG_TERM)
+  connectionMode        ConnectionMode        @default(BOTH)
+  education             String?
+  occupation            String?
+  city                  String?
+  state                 String?
+  country               String?               @default("India")
+  languages             String[]              @default(["English", "Hindi"])
+  completenessScore     Int                   @default(40)
+  verificationStatus    VerificationStatus    @default(UNVERIFIED)
+  isIncognito           Boolean               @default(false)
+  isVisible             Boolean               @default(true)
+  createdAt             DateTime              @default(now())
+  updatedAt             DateTime              @updatedAt
+
+  user     User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  photos   ProfilePhoto[]
+  prompts  ProfilePrompt[]
+  interests UserInterest[]
+
+  @@index([gender])
+  @@index([connectionMode])
+  @@index([relationshipIntention])
+  @@index([city])
+  @@index([verificationStatus])
+}
+
+model ProfilePhoto {
+  id          String   @id @default(uuid())
+  profileId   String
+  url         String
+  order       Int      @default(0)
+  isPrimary   Boolean  @default(false)
+  isModerated Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId])
+}
+
+model ProfilePrompt {
+  id        String   @id @default(uuid())
+  profileId String
+  question  String
+  answer    String
+  createdAt DateTime @default(now())
+
+  profile Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId])
+}
+
+model Interest {
+  id        String         @id @default(uuid())
+  name      String         @unique
+  category  String
+  emoji     String
+  isActive  Boolean        @default(true)
+  createdAt DateTime       @default(now())
+
+  users UserInterest[]
+
+  @@index([category])
+}
+
+model UserInterest {
+  id         String   @id @default(uuid())
+  profileId  String
+  interestId String
+  createdAt  DateTime @default(now())
+
+  profile  Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  interest Interest @relation(fields: [interestId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, interestId])
+}
+
+// ------------------------------------------------------------------------------
+// PREFERENCES & LOCATION (POSTGIS COMPATIBLE)
+// ------------------------------------------------------------------------------
+
+model UserPreference {
+  id                     String                  @id @default(uuid())
+  userId                 String                  @unique
+  minAge                 Int                     @default(18)
+  maxAge                 Int                     @default(50)
+  maxDistanceKm          Int                     @default(50)
+  interestedGenders      Gender[]                @default([WOMAN, MAN, NON_BINARY])
+  interestedIntentions   RelationshipIntention[]
+  discoveryMode          ConnectionMode          @default(BOTH)
+  showOnlyVerified       Boolean                 @default(false)
+  createdAt              DateTime                @default(now())
+  updatedAt              DateTime                @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserLocation {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  latitude  Float
+  longitude Float
+  city      String?
+  state     String?
+  country   String?  @default("India")
+  isPaused  Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([latitude, longitude])
+  @@index([city])
+}
+
+model LocationPreference {
+  id              String   @id @default(uuid())
+  userId          String   @unique
+  hideDistance    Boolean  @default(false)
+  strictRadius    Boolean  @default(false)
+  customCity      String?
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ------------------------------------------------------------------------------
+// SWIPES, LIKES & MATCHES
+// ------------------------------------------------------------------------------
+
+model Like {
+  id             String         @id @default(uuid())
+  senderId       String
+  receiverId     String
+  connectionMode ConnectionMode @default(DATING)
+  isSuperLike    Boolean        @default(false)
+  createdAt      DateTime       @default(now())
+
+  sender   User @relation("LikesSent", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("LikesReceived", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@unique([senderId, receiverId, connectionMode])
+  @@index([receiverId])
+}
+
+model DiscoveryDecision {
+  id             String         @id @default(uuid())
+  userId         String
+  targetUserId   String
+  action         SwipeAction
+  connectionMode ConnectionMode @default(DATING)
+  createdAt      DateTime       @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, targetUserId, connectionMode])
+  @@index([userId])
+}
+
+model Match {
+  id             String         @id @default(uuid())
+  user1Id        String
+  user2Id        String
+  connectionMode ConnectionMode @default(DATING)
+  status         MatchStatus    @default(ACTIVE)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  user1        User          @relation("MatchUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+  user2        User          @relation("MatchUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+  conversation Conversation?
+
+  @@unique([user1Id, user2Id, connectionMode])
+  @@index([user1Id])
+  @@index([user2Id])
+  @@index([status])
+}
+
+// ------------------------------------------------------------------------------
+// CHAT & MESSAGING
+// ------------------------------------------------------------------------------
+
+model Conversation {
+  id        String   @id @default(uuid())
+  matchId   String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  match    Match?               @relation(fields: [matchId], references: [id], onDelete: SetNull)
+  members  ConversationMember[]
+  messages Message[]
+
+  @@index([updatedAt])
+}
+
+model ConversationMember {
+  id             String    @id @default(uuid())
+  conversationId String
+  userId         String
+  isMuted        Boolean   @default(false)
+  lastReadAt     DateTime?
+  joinedAt       DateTime  @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([conversationId, userId])
+  @@index([userId])
+}
+
+model Message {
+  id             String        @id @default(uuid())
+  conversationId String
+  senderId       String
+  type           MessageType   @default(TEXT)
+  content        String
+  status         MessageStatus @default(SENT)
+  createdAt      DateTime      @default(now())
+  readAt         DateTime?
+
+  conversation Conversation        @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender       User                @relation(fields: [senderId], references: [id], onDelete: Cascade)
+  attachments  MessageAttachment[]
+  reactions    MessageReaction[]
+
+  @@index([conversationId, createdAt])
+  @@index([senderId])
+}
+
+model MessageAttachment {
+  id              String   @id @default(uuid())
+  messageId       String
+  url             String
+  mimeType        String
+  fileSizeBytes   Int
+  durationSeconds Int?     // For voice notes
+  waveformJson    String?  // Waveform data array
+  createdAt       DateTime @default(now())
+
+  message Message @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  @@index([messageId])
+}
+
+model MessageReaction {
+  id        String   @id @default(uuid())
+  messageId String
+  userId    String
+  emoji     String
+  createdAt DateTime @default(now())
+
+  message Message @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([messageId, userId, emoji])
+}
+
+// ------------------------------------------------------------------------------
+// CALLS & AUDIO/VIDEO
+// ------------------------------------------------------------------------------
+
+model Call {
+  id              String     @id @default(uuid())
+  callerId        String
+  receiverId      String
+  type            CallType   @default(VOICE)
+  status          CallStatus @default(INITIATED)
+  durationSeconds Int        @default(0)
+  startedAt       DateTime?
+  endedAt         DateTime?
+  createdAt       DateTime   @default(now())
+
+  caller       User              @relation("Caller", fields: [callerId], references: [id], onDelete: Cascade)
+  receiver     User              @relation("Receiver", fields: [receiverId], references: [id], onDelete: Cascade)
+  participants CallParticipant[]
+
+  @@index([callerId])
+  @@index([receiverId])
+}
+
+model CallParticipant {
+  id        String   @id @default(uuid())
+  callId    String
+  userId    String
+  joinedAt  DateTime @default(now())
+  leftAt    DateTime?
+
+  call Call @relation(fields: [callId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([callId, userId])
+}
+
+// ------------------------------------------------------------------------------
+// VOICE ROOMS & COMMUNITIES
+// ------------------------------------------------------------------------------
+
+model VoiceRoom {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  category    String
+  emoji       String   @default("🎧")
+  hostId      String
+  isPrivate   Boolean  @default(false)
+  capacity    Int      @default(50)
+  createdAt   DateTime @default(now())
+  endedAt     DateTime?
+
+  host    User              @relation("VoiceRoomHost", fields: [hostId], references: [id], onDelete: Cascade)
+  members VoiceRoomMember[]
+
+  @@index([hostId])
+  @@index([category])
+}
+
+model VoiceRoomMember {
+  id            String        @id @default(uuid())
+  roomId        String
+  userId        String
+  role          VoiceRoomRole @default(LISTENER)
+  isMuted       Boolean       @default(false)
+  hasRaisedHand Boolean       @default(false)
+  joinedAt      DateTime      @default(now())
+
+  room VoiceRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([roomId, userId])
+}
+
+model Community {
+  id            String   @id @default(uuid())
+  name          String   @unique
+  description   String
+  category      String
+  emoji         String   @default("🌈")
+  coverImageUrl String?
+  rules         String[] @default([])
+  createdAt     DateTime @default(now())
+
+  members CommunityMember[]
+
+  @@index([category])
+}
+
+model CommunityMember {
+  id          String   @id @default(uuid())
+  communityId String
+  userId      String
+  isModerator Boolean  @default(false)
+  joinedAt    DateTime @default(now())
+
+  community Community @relation(fields: [communityId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([communityId, userId])
+}
+
+// ------------------------------------------------------------------------------
+// EVENTS
+// ------------------------------------------------------------------------------
+
+model Event {
+  id                  String      @id @default(uuid())
+  organizerId         String
+  title               String
+  description         String
+  category            String
+  emoji               String      @default("🎉")
+  venueName           String
+  approximateLocation String
+  city                String
+  startTime           DateTime
+  endTime             DateTime
+  capacity            Int         @default(30)
+  status              EventStatus @default(SCHEDULED)
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  organizer     User                @relation("EventOrganizer", fields: [organizerId], references: [id], onDelete: Cascade)
+  registrations EventRegistration[]
+
+  @@index([city, startTime])
+  @@index([status])
+}
+
+model EventRegistration {
+  id           String   @id @default(uuid())
+  eventId      String
+  userId       String
+  registeredAt DateTime @default(now())
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, userId])
+}
+
+// ------------------------------------------------------------------------------
+// SAFETY, BLOCKS, REPORTS & MODERATION
+// ------------------------------------------------------------------------------
+
+model Block {
+  id            String   @id @default(uuid())
+  blockerId     String
+  blockedUserId String
+  createdAt     DateTime @default(now())
+
+  blocker     User @relation("Blocker", fields: [blockerId], references: [id], onDelete: Cascade)
+  blockedUser User @relation("Blocked", fields: [blockedUserId], references: [id], onDelete: Cascade)
+
+  @@unique([blockerId, blockedUserId])
+  @@index([blockerId])
+  @@index([blockedUserId])
+}
+
+model Report {
+  id             String         @id @default(uuid())
+  reporterId     String
+  reportedUserId String
+  category       ReportCategory
+  reason         String
+  evidenceUrls   String[]       @default([])
+  status         ReportStatus   @default(PENDING)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  reporter     User            @relation("Reporter", fields: [reporterId], references: [id], onDelete: Cascade)
+  reportedUser User            @relation("ReportedUser", fields: [reportedUserId], references: [id], onDelete: Cascade)
+  caseRecord   ModerationCase?
+
+  @@index([reportedUserId])
+  @@index([status])
+}
+
+model ModerationCase {
+  id                  String                @id @default(uuid())
+  reportId            String                @unique
+  assignedModeratorId String?
+  actionTaken         ModerationActionType?
+  moderatorNotes      String?
+  resolvedAt          DateTime?
+  createdAt           DateTime              @default(now())
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@index([assignedModeratorId])
+}
+
+model VerificationRequest {
+  id         String             @id @default(uuid())
+  userId     String
+  selfieUrl  String
+  status     VerificationStatus @default(PENDING)
+  reviewerId String?
+  reviewedAt DateTime?
+  notes      String?
+  createdAt  DateTime           @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+// ------------------------------------------------------------------------------
+// NOTIFICATIONS & PREFERENCES
+// ------------------------------------------------------------------------------
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  body      String
+  type      String   // match, message, like, event, system
+  dataJson  String?
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isRead])
+}
+
+model NotificationPreference {
+  id           String   @id @default(uuid())
+  userId       String   @unique
+  emailMatches Boolean  @default(true)
+  emailChat    Boolean  @default(false)
+  pushMatches  Boolean  @default(true)
+  pushChat     Boolean  @default(true)
+  pushEvents   Boolean  @default(true)
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ------------------------------------------------------------------------------
+// SUBSCRIPTIONS & PAYMENTS
+// ------------------------------------------------------------------------------
+
+model Subscription {
+  id        String           @id @default(uuid())
+  userId    String
+  tier      SubscriptionTier @default(FREE)
+  startsAt  DateTime         @default(now())
+  expiresAt DateTime
+  isActive  Boolean          @default(true)
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  paymentEvents PaymentEvent[]
+
+  @@index([userId, isActive])
+}
+
+model PaymentEvent {
+  id             String        @id @default(uuid())
+  subscriptionId String
+  amountInr      Int
+  status         PaymentStatus @default(COMPLETED)
+  paymentGateway String        @default("razorpay")
+  transactionRef String?
+  createdAt      DateTime      @default(now())
+
+  subscription Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  @@index([subscriptionId])
+}
+
+// ------------------------------------------------------------------------------
+// ADMIN & AUDIT
+// ------------------------------------------------------------------------------
+
+model AdminUser {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         UserRole  @default(MODERATOR)
+  isActive     Boolean   @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+
+  auditLogs AuditLog[]
+
+  @@index([email])
+}
+
+model AuditLog {
+  id           String   @id @default(uuid())
+  adminId      String
+  action       String
+  targetEntity String
+  targetId     String
+  detailsJson  String?
+  ipAddress    String?
+  createdAt    DateTime @default(now())
+
+  admin AdminUser @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([adminId])
+  @@index([targetEntity, targetId])
+}
+
+model SupportTicket {
+  id        String   @id @default(uuid())
+  userId    String
+  subject   String
+  message   String
+  status    String   @default("OPEN")
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model ConsentRecord {
+  id         String   @id @default(uuid())
+  userId     String
+  consentType String  // terms_of_service, privacy_policy, location_tracking
+  version    String
+  granted    Boolean  @default(true)
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model FeatureFlag {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  description String
+  isEnabled   Boolean  @default(false)
+  updatedAt   DateTime @updatedAt
+}

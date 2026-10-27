@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pairup/contracts": ["packages/contracts/src"],
+      "@pairup/contracts/*": ["packages/contracts/src/*"],
+      "@pairup/domain-types": ["packages/domain-types/src"],
+      "@pairup/domain-types/*": ["packages/domain-types/src/*"],
+      "@pairup/design-tokens": ["packages/design-tokens/src"],
+      "@pairup/design-tokens/*": ["packages/design-tokens/src/*"],
+      "@pairup/validation": ["packages/validation/src"],
+      "@pairup/validation/*": ["packages/validation/src/*"],
+      "@pairup/api-client": ["packages/api-client/src"],
+      "@pairup/api-client/*": ["packages/api-client/src/*"],
+      "@pairup/config": ["packages/config/src"],
+      "@pairup/config/*": ["packages/config/src/*"],
+      "@pairup/test-utils": ["packages/test-utils/src"],
+      "@pairup/test-utils/*": ["packages/test-utils/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build", ".turbo"]
+}

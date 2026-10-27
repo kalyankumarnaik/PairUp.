@@ -1,0 +1,16 @@
+{
+  "name": "@pairup/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@pairup/design-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}

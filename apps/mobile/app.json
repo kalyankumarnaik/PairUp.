@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "PairUp AI",
+    "slug": "pairup-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "pairup",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7C3AED"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ai.pairup.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "PairUp AI uses your approximate location to show you nearby dating and friendship discovery matches.",
+        "NSMicrophoneUsageDescription": "PairUp AI uses microphone access for voice messages and live audio rooms."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#7C3AED"
+      },
+      "package": "ai.pairup.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Show potential dating matches near your current city."
+        }
+      ]
+    ]
+  }
+}

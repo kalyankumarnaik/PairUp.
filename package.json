@@ -1,0 +1,31 @@
+{
+  "name": "pairup-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PairUp AI - Full-Stack Dating, Friendship & Social Discovery Platform",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:api": "pnpm --filter @pairup/api dev",
+    "dev:web": "pnpm --filter @pairup/web dev",
+    "dev:worker": "pnpm --filter @pairup/worker dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "db:generate": "pnpm --filter @pairup/database db:generate",
+    "db:push": "pnpm --filter @pairup/database db:push",
+    "db:seed": "pnpm --filter @pairup/database db:seed",
+    "measure-loc": "node scripts/measure-loc.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.1.2",
+    "typescript": "^5.6.2"
+  },
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
