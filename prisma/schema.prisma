@@ -1,0 +1,466 @@
+// ============================================================================
+// PairUp Core Platform - Prisma Database Schema
+// Module: Core Backend, Shared Architecture, Auth, Matching & Safety
+// Owned by: Member 1 (Platform Technical Lead)
+// ============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ----------------------------------------------------------------------------
+// Enums
+// ----------------------------------------------------------------------------
+
+enum AccountStatus {
+  PENDING_VERIFICATION
+  ACTIVE
+  SUSPENDED
+  DEACTIVATED
+  BANNED
+  DELETED
+}
+
+enum UserRole {
+  USER
+  MODERATOR
+  ADMIN
+}
+
+enum TokenType {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  NON_BINARY
+  OTHER
+}
+
+enum SexualOrientation {
+  HETEROSEXUAL
+  GAY
+  LESBIAN
+  BISEXUAL
+  ASEXUAL
+  PANSEXUAL
+  QUEER
+  OTHER
+}
+
+enum RelationshipIntent {
+  LONG_TERM
+  LONG_TERM_OPEN_TO_SHORT
+  SHORT_TERM_OPEN_TO_LONG
+  SHORT_TERM
+  CASUAL
+  FRIENDSHIP
+  NOT_SURE_YET
+}
+
+enum HabitFrequency {
+  NEVER
+  SOCIALLY
+  REGULARLY
+  PREFER_NOT_TO_SAY
+}
+
+enum PhotoStatus {
+  APPROVED
+  PENDING_REVIEW
+  REJECTED
+}
+
+enum VisibilityLevel {
+  PUBLIC
+  INCOGNITO
+  MATCHES_ONLY
+}
+
+enum LikeType {
+  STANDARD
+  SUPERLIKE
+}
+
+enum MatchStatus {
+  ACTIVE
+  UNMATCHED
+  BLOCKED
+}
+
+enum MatchEventType {
+  CREATED
+  UNMATCHED
+  RECONNECTED
+  SUPERMATCH
+}
+
+enum AuditActionType {
+  REGISTER
+  LOGIN_SUCCESS
+  LOGIN_FAILED
+  LOGOUT
+  PASSWORD_RESET_REQUEST
+  PASSWORD_RESET_SUCCESS
+  EMAIL_VERIFIED
+  PROFILE_UPDATED
+  ACCOUNT_SUSPENDED
+  ACCOUNT_RESTORED
+  ACCOUNT_DELETED
+  USER_BLOCKED
+  USER_UNBLOCKED
+  SECURITY_ALERT
+}
+
+// ----------------------------------------------------------------------------
+// Authentication & Accounts Models
+// ----------------------------------------------------------------------------
+
+model User {
+  id                String        @id @default(uuid())
+  email             String        @unique
+  phoneNumber       String?       @unique
+  role              UserRole      @default(USER)
+  status            AccountStatus @default(PENDING_VERIFICATION)
+  isEmailVerified   Boolean       @default(false)
+  isPhoneVerified   Boolean       @default(false)
+  lastLoginAt       DateTime?
+  deletedAt         DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  // 1:1 and 1:N Core Relations
+  credential             UserCredential?
+  sessions               UserSession[]
+  verificationTokens     VerificationToken[]
+  profile                Profile?
+  datingPreference       DatingPreference?
+  privacySetting         PrivacySetting?
+  notificationPreference NotificationPreference?
+
+  // Matching & Discovery Relations
+  sentLikes         UserLike[] @relation("SentLikes")
+  receivedLikes     UserLike[] @relation("ReceivedLikes")
+  sentPasses        UserPass[] @relation("SentPasses")
+  receivedPasses    UserPass[] @relation("ReceivedPasses")
+  matchesAsUserOne  Match[]    @relation("MatchesAsUserOne")
+  matchesAsUserTwo  Match[]    @relation("MatchesAsUserTwo")
+
+  // Safety & Moderation Relations
+  blockedUsers      UserBlock[]            @relation("Blocker")
+  blockedByUsers    UserBlock[]            @relation("Blocked")
+  statusHistory     AccountStatusHistory[]
+  auditLogs         AuditLog[]
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("users")
+}
+
+model UserCredential {
+  id                  String    @id @default(uuid())
+  userId              String    @unique
+  user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passwordHash        String
+  passwordAlgo        String    @default("bcrypt")
+  failedLoginAttempts Int       @default(0)
+  lockoutUntil        DateTime?
+  passwordChangedAt   DateTime  @default(now())
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  @@map("user_credentials")
+}
+
+model UserSession {
+  id               String    @id @default(uuid())
+  userId           String
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  refreshTokenHash String    @unique
+  deviceInfo       String?
+  ipAddress        String?
+  userAgent        String?
+  isRevoked        Boolean   @default(false)
+  revokedAt        DateTime?
+  revocationReason String?
+  expiresAt        DateTime
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("user_sessions")
+}
+
+model VerificationToken {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  type      TokenType
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId, type])
+  @@map("verification_tokens")
+}
+
+// ----------------------------------------------------------------------------
+// Profiles, Interests & Dating Preferences Models
+// ----------------------------------------------------------------------------
+
+model Profile {
+  id                 String             @id @default(uuid())
+  userId             String             @unique
+  user               User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  displayName        String
+  birthDate          DateTime
+  gender             Gender
+  sexualOrientation  SexualOrientation
+  bio                String?            @db.VarChar(1000)
+  occupation         String?
+  education          String?
+  heightCm           Int?
+  drinkingHabit      HabitFrequency?
+  smokingHabit       HabitFrequency?
+  workoutHabit       HabitFrequency?
+  relationshipIntent RelationshipIntent @default(LONG_TERM)
+  latitude           Float?
+  longitude          Float?
+  city               String?
+  country            String?
+  completionScore    Int                @default(0)
+  isProfileComplete  Boolean            @default(false)
+  lastActiveAt       DateTime           @default(now())
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  photos    ProfilePhoto[]
+  interests ProfileInterest[]
+  prompts   ProfilePrompt[]
+
+  @@index([latitude, longitude])
+  @@index([birthDate])
+  @@index([gender])
+  @@map("profiles")
+}
+
+model ProfilePhoto {
+  id               String      @id @default(uuid())
+  profileId        String
+  profile          Profile     @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  url              String
+  thumbnailUrl     String?
+  displayOrder     Int         @default(0)
+  isPrimary        Boolean     @default(false)
+  status           PhotoStatus @default(APPROVED)
+  moderationReason String?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  @@index([profileId, displayOrder])
+  @@map("profile_photos")
+}
+
+model Interest {
+  id       String            @id @default(uuid())
+  name     String            @unique
+  category String
+  icon     String?
+  profiles ProfileInterest[]
+
+  @@map("interests")
+}
+
+model ProfileInterest {
+  profileId String
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  interestId String
+  interest  Interest @relation(fields: [interestId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@id([profileId, interestId])
+  @@map("profile_interests")
+}
+
+model ProfilePrompt {
+  id             String   @id @default(uuid())
+  profileId      String
+  profile        Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  promptQuestion String
+  promptAnswer   String   @db.VarChar(500)
+  displayOrder   Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("profile_prompts")
+}
+
+model DatingPreference {
+  id                String               @id @default(uuid())
+  userId            String               @unique
+  user              User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  minAge            Int                  @default(18)
+  maxAge            Int                  @default(100)
+  genderPreferences Gender[]
+  maxDistanceKm     Int                  @default(50)
+  intentPreferences RelationshipIntent[]
+  globalDiscovery   Boolean              @default(false)
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  @@map("dating_preferences")
+}
+
+model PrivacySetting {
+  id               String          @id @default(uuid())
+  userId           String          @unique
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  visibility       VisibilityLevel @default(PUBLIC)
+  showDistance     Boolean         @default(true)
+  showOnlineStatus Boolean         @default(true)
+  showReadReceipts Boolean         @default(true)
+  showAge          Boolean         @default(true)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@map("privacy_settings")
+}
+
+model NotificationPreference {
+  id             String   @id @default(uuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  emailOnMatch   Boolean  @default(true)
+  emailOnMessage Boolean  @default(false)
+  pushOnMatch    Boolean  @default(true)
+  pushOnMessage  Boolean  @default(true)
+  pushOnLike     Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("notification_preferences")
+}
+
+// ----------------------------------------------------------------------------
+// Discovery & Matching Models
+// ----------------------------------------------------------------------------
+
+model UserLike {
+  id         String   @id @default(uuid())
+  fromUserId String
+  fromUser   User     @relation("SentLikes", fields: [fromUserId], references: [id], onDelete: Cascade)
+  toUserId   String
+  toUser     User     @relation("ReceivedLikes", fields: [toUserId], references: [id], onDelete: Cascade)
+  type       LikeType @default(STANDARD)
+  createdAt  DateTime @default(now())
+
+  @@unique([fromUserId, toUserId])
+  @@index([toUserId, fromUserId])
+  @@map("user_likes")
+}
+
+model UserPass {
+  id         String   @id @default(uuid())
+  fromUserId String
+  fromUser   User     @relation("SentPasses", fields: [fromUserId], references: [id], onDelete: Cascade)
+  toUserId   String
+  toUser     User     @relation("ReceivedPasses", fields: [toUserId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@unique([fromUserId, toUserId])
+  @@index([fromUserId, createdAt])
+  @@map("user_passes")
+}
+
+model Match {
+  id                String      @id @default(uuid())
+  userOneId         String
+  userOne           User        @relation("MatchesAsUserOne", fields: [userOneId], references: [id], onDelete: Cascade)
+  userTwoId         String
+  userTwo           User        @relation("MatchesAsUserTwo", fields: [userTwoId], references: [id], onDelete: Cascade)
+  status            MatchStatus @default(ACTIVE)
+  matchedAt         DateTime    @default(now())
+  unmatchedAt       DateTime?
+  unmatchedById     String?
+  unmatchReason     String?
+  lastInteractionAt DateTime    @default(now())
+
+  events MatchEvent[]
+
+  // Guaranteed canonical ordering: userOneId must be lexicographically smaller than userTwoId
+  @@unique([userOneId, userTwoId])
+  @@index([userOneId, status])
+  @@index([userTwoId, status])
+  @@index([lastInteractionAt])
+  @@map("matches")
+}
+
+model MatchEvent {
+  id            String         @id @default(uuid())
+  matchId       String
+  match         Match          @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  eventType     MatchEventType
+  triggeredById String?
+  metadata      Json?
+  createdAt     DateTime       @default(now())
+
+  @@index([matchId, createdAt])
+  @@map("match_events")
+}
+
+// ----------------------------------------------------------------------------
+// Safety, Moderation & Audit Models
+// ----------------------------------------------------------------------------
+
+model UserBlock {
+  id        String   @id @default(uuid())
+  blockerId String
+  blocker   User     @relation("Blocker", fields: [blockerId], references: [id], onDelete: Cascade)
+  blockedId String
+  blocked   User     @relation("Blocked", fields: [blockedId], references: [id], onDelete: Cascade)
+  reason    String?
+  createdAt DateTime @default(now())
+
+  @@unique([blockerId, blockedId])
+  @@index([blockerId])
+  @@index([blockedId])
+  @@map("user_blocks")
+}
+
+model AccountStatusHistory {
+  id             String        @id @default(uuid())
+  userId         String
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  previousStatus AccountStatus
+  newStatus      AccountStatus
+  reason         String?
+  changedById    String?
+  createdAt      DateTime      @default(now())
+
+  @@index([userId, createdAt])
+  @@map("account_status_history")
+}
+
+model AuditLog {
+  id        String          @id @default(uuid())
+  userId    String?
+  user      User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    AuditActionType
+  ipAddress String?
+  userAgent String?
+  details   Json?
+  createdAt DateTime        @default(now())
+
+  @@index([userId, action])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
