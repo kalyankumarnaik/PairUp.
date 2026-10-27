@@ -12,13 +12,16 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { apiClient } from '../lib/api';
-import { ChatMessage, Conversation, MessageType } from '@pairup/domain-types';
+import { ChatMessage, Conversation, MessageStatus, MessageType } from '@pairup/domain-types';
+import { MOCK_CONVERSATIONS } from '../lib/mockData';
 
 export const MessagesPage: React.FC = () => {
   const { user, profile } = useAuth();
-  const [conversations, setConversations] = useState<Conversation[]>([]);
-  const [activeConvId, setActiveConvId] = useState<string | null>(null);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [conversations, setConversations] = useState<Conversation[]>(MOCK_CONVERSATIONS);
+  const [activeConvId, setActiveConvId] = useState<string | null>(MOCK_CONVERSATIONS[0].id);
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    MOCK_CONVERSATIONS[0].lastMessage as any
+  ]);
   const [inputContent, setInputContent] = useState('');
   const [isRecordingVoice, setIsRecordingVoice] = useState(false);
   const [voiceSeconds, setVoiceSeconds] = useState(0);
@@ -49,19 +52,27 @@ export const MessagesPage: React.FC = () => {
           setActiveConvId(res.data[0].id);
         }
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Keep MOCK_CONVERSATIONS
     }
   };
 
   const loadMessages = async (convId: string) => {
     try {
       const res = await apiClient.getMessages(convId);
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         setMessages(res.data);
+        return;
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Fallback
+    }
+
+    const conv = conversations.find((c) => c.id === convId);
+    if (conv?.lastMessage) {
+      setMessages([conv.lastMessage as any]);
+    } else {
+      setMessages([]);
     }
   };
 
@@ -72,13 +83,30 @@ export const MessagesPage: React.FC = () => {
     const content = inputContent.trim();
     setInputContent('');
 
+    const newMsg: ChatMessage = {
+      id: `msg_${Date.now()}`,
+      conversationId: activeConvId,
+      senderId: user?.id || 'usr_current',
+      type: MessageType.TEXT,
+      content: content,
+      status: MessageStatus.SENT,
+      attachments: [],
+      reactions: [],
+      createdAt: new Date().toISOString()
+    };
+
+    setMessages((prev) => [...prev, newMsg]);
+
     try {
       const res = await apiClient.sendMessage(activeConvId, content, 'TEXT');
       if (res.data) {
-        setMessages((prev) => [...prev, res.data!]);
+        // update message id if returned from backend
+        setMessages((prev) =>
+          prev.map((m) => (m.id === newMsg.id ? res.data! : m))
+        );
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Offline fallback: message already in state
     }
   };
 

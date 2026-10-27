@@ -22,6 +22,30 @@ export const AuthPage: React.FC = () => {
   const { login, signup, verifyOtp } = useAuth();
   const navigate = useNavigate();
 
+  const handleQuickLogin = async (email: string, pass: string) => {
+    setIdentifier(email);
+    setPassword(pass);
+    setIsSignup(false);
+    setError('');
+    setLoading(true);
+    try {
+      const res = await login(email, pass);
+      if (res.success) {
+        if (email.toLowerCase().includes('admin')) {
+          navigate('/admin');
+        } else {
+          navigate('/home');
+        }
+      } else {
+        setError(res.message || 'Login failed');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Login failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
@@ -54,7 +78,11 @@ export const AuthPage: React.FC = () => {
       } else {
         const res = await login(identifier, password);
         if (res.success) {
-          navigate('/home');
+          if (identifier.toLowerCase().includes('admin')) {
+            navigate('/admin');
+          } else {
+            navigate('/home');
+          }
         } else {
           setError(res.message || 'Invalid credentials');
         }
@@ -110,33 +138,24 @@ export const AuthPage: React.FC = () => {
           <div className="flex gap-2">
             <button
               type="button"
-              onClick={() => {
-                setIdentifier('ananya.verma@example.com');
-                setPassword('Password123!');
-                setIsSignup(false);
-              }}
+              disabled={loading}
+              onClick={() => handleQuickLogin('ananya.verma@example.com', 'Password123!')}
               className="px-2.5 py-1 rounded-lg bg-white border border-violet/20 hover:border-violet font-semibold transition-colors shadow-xs"
             >
               👩 Ananya (Mumbai)
             </button>
             <button
               type="button"
-              onClick={() => {
-                setIdentifier('aarav.sharma@example.com');
-                setPassword('Password123!');
-                setIsSignup(false);
-              }}
+              disabled={loading}
+              onClick={() => handleQuickLogin('aarav.sharma@example.com', 'Password123!')}
               className="px-2.5 py-1 rounded-lg bg-white border border-violet/20 hover:border-violet font-semibold transition-colors shadow-xs"
             >
               👨 Aarav (Mumbai)
             </button>
             <button
               type="button"
-              onClick={() => {
-                setIdentifier('admin@pairup.ai');
-                setPassword('AdminSecurePairUp2026!');
-                setIsSignup(false);
-              }}
+              disabled={loading}
+              onClick={() => handleQuickLogin('admin@pairup.ai', 'AdminSecurePairUp2026!')}
               className="px-2.5 py-1 rounded-lg bg-midnightInk text-white font-semibold transition-colors"
             >
               🛡️ Admin

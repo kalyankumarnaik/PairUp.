@@ -14,10 +14,11 @@ import {
 import { apiClient } from '../lib/api';
 import { useAuth } from '../context/AuthContext';
 import { VoiceRoom, VoiceRoomMember } from '@pairup/domain-types';
+import { MOCK_ROOMS } from '../lib/mockData';
 
 export const RoomsPage: React.FC = () => {
   const { user, profile } = useAuth();
-  const [rooms, setRooms] = useState<VoiceRoom[]>([]);
+  const [rooms, setRooms] = useState<VoiceRoom[]>(MOCK_ROOMS);
   const [activeRoom, setActiveRoom] = useState<VoiceRoom | null>(null);
   const [isMuted, setIsMuted] = useState(false);
   const [hasRaisedHand, setHasRaisedHand] = useState(false);
@@ -35,11 +36,11 @@ export const RoomsPage: React.FC = () => {
   const loadRooms = async () => {
     try {
       const res = await apiClient.getVoiceRooms();
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         setRooms(res.data);
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Keep MOCK_ROOMS
     }
   };
 

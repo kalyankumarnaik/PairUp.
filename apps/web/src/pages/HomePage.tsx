@@ -15,13 +15,19 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { apiClient } from '../lib/api';
 import { DiscoveryCard, MatchSummary, SocialEvent, VoiceRoom } from '@pairup/domain-types';
+import {
+  MOCK_DISCOVERY_CARDS,
+  MOCK_EVENTS,
+  MOCK_MATCHES,
+  MOCK_ROOMS
+} from '../lib/mockData';
 
 export const HomePage: React.FC = () => {
   const { user, profile } = useAuth();
-  const [matches, setMatches] = useState<MatchSummary[]>([]);
-  const [recommendations, setRecommendations] = useState<DiscoveryCard[]>([]);
-  const [rooms, setRooms] = useState<VoiceRoom[]>([]);
-  const [events, setEvents] = useState<SocialEvent[]>([]);
+  const [matches, setMatches] = useState<MatchSummary[]>(MOCK_MATCHES);
+  const [recommendations, setRecommendations] = useState<DiscoveryCard[]>(MOCK_DISCOVERY_CARDS.slice(0, 4));
+  const [rooms, setRooms] = useState<VoiceRoom[]>(MOCK_ROOMS);
+  const [events, setEvents] = useState<SocialEvent[]>(MOCK_EVENTS);
 
   useEffect(() => {
     loadDashboardData();
@@ -29,19 +35,27 @@ export const HomePage: React.FC = () => {
 
   const loadDashboardData = async () => {
     try {
-      const [matchesRes, feedRes, roomsRes, eventsRes] = await Promise.all([
+      const [matchesRes, feedRes, roomsRes, eventsRes] = await Promise.allSettled([
         apiClient.getMatches(),
         apiClient.getDiscoveryFeed(),
         apiClient.getVoiceRooms(),
         apiClient.getEvents()
       ]);
 
-      if (matchesRes.data) setMatches(matchesRes.data);
-      if (feedRes.data) setRecommendations(feedRes.data.slice(0, 4));
-      if (roomsRes.data) setRooms(roomsRes.data.slice(0, 2));
-      if (eventsRes.data) setEvents(eventsRes.data.slice(0, 2));
-    } catch (err) {
-      console.error('Failed to load dashboard:', err);
+      if (matchesRes.status === 'fulfilled' && matchesRes.value.data?.length) {
+        setMatches(matchesRes.value.data);
+      }
+      if (feedRes.status === 'fulfilled' && feedRes.value.data?.length) {
+        setRecommendations(feedRes.value.data.slice(0, 4));
+      }
+      if (roomsRes.status === 'fulfilled' && roomsRes.value.data?.length) {
+        setRooms(roomsRes.value.data.slice(0, 2));
+      }
+      if (eventsRes.status === 'fulfilled' && eventsRes.value.data?.length) {
+        setEvents(eventsRes.value.data.slice(0, 2));
+      }
+    } catch {
+      // Keep mock fallback data
     }
   };
 

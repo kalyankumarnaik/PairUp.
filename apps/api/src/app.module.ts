@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { DatabaseModule } from './common/database/database.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ProfilesModule } from './modules/profiles/profiles.module';
 import { LocationModule } from './modules/location/location.module';
@@ -13,6 +14,7 @@ import { HealthModule } from './modules/health/health.module';
 
 @Module({
   imports: [
+    DatabaseModule,
     AuthModule,
     ProfilesModule,
     LocationModule,

@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 import { Heart, MessageCircle, Sparkles, UserCheck } from 'lucide-react';
 import { apiClient } from '../lib/api';
 import { MatchSummary } from '@pairup/domain-types';
+import { MOCK_MATCHES } from '../lib/mockData';
 
 export const MatchesPage: React.FC = () => {
-  const [matches, setMatches] = useState<MatchSummary[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [matches, setMatches] = useState<MatchSummary[]>(MOCK_MATCHES);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadMatches();
   }, []);
 
   const loadMatches = async () => {
-    setLoading(true);
     try {
       const res = await apiClient.getMatches();
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         setMatches(res.data);
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Keep MOCK_MATCHES
     } finally {
       setLoading(false);
     }

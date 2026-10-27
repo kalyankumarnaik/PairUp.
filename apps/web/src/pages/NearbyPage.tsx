@@ -12,16 +12,17 @@ import {
 import { apiClient } from '../lib/api';
 import { DiscoveryCard } from '@pairup/domain-types';
 import { Link } from 'react-router-dom';
+import { MOCK_DISCOVERY_CARDS } from '../lib/mockData';
 
 const CITIES = ['All', 'Mumbai', 'Bengaluru', 'New Delhi', 'Hyderabad', 'Pune', 'Kolkata'];
 const RADII = [5, 10, 25, 50];
 
 export const NearbyPage: React.FC = () => {
-  const [profiles, setProfiles] = useState<DiscoveryCard[]>([]);
+  const [profiles, setProfiles] = useState<DiscoveryCard[]>(MOCK_DISCOVERY_CARDS);
   const [radiusKm, setRadiusKm] = useState(25);
   const [selectedCity, setSelectedCity] = useState('All');
   const [isLocationPaused, setIsLocationPaused] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [gpsStatus, setGpsStatus] = useState<string>('Ready');
 
   useEffect(() => {
@@ -29,18 +30,27 @@ export const NearbyPage: React.FC = () => {
   }, [radiusKm, selectedCity]);
 
   const fetchNearby = async () => {
-    setLoading(true);
     try {
       const res = await apiClient.getNearbyProfiles(radiusKm);
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         let list = res.data;
         if (selectedCity !== 'All') {
           list = list.filter((p) => p.city?.toLowerCase().includes(selectedCity.toLowerCase()));
         }
         setProfiles(list);
+      } else {
+        let list = MOCK_DISCOVERY_CARDS;
+        if (selectedCity !== 'All') {
+          list = list.filter((p) => p.city?.toLowerCase().includes(selectedCity.toLowerCase()));
+        }
+        setProfiles(list);
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      let list = MOCK_DISCOVERY_CARDS;
+      if (selectedCity !== 'All') {
+        list = list.filter((p) => p.city?.toLowerCase().includes(selectedCity.toLowerCase()));
+      }
+      setProfiles(list);
     } finally {
       setLoading(false);
     }

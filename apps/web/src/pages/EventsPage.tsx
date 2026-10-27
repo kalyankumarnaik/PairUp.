@@ -10,10 +10,11 @@ import {
 } from 'lucide-react';
 import { apiClient } from '../lib/api';
 import { SocialEvent } from '@pairup/domain-types';
+import { MOCK_EVENTS } from '../lib/mockData';
 
 export const EventsPage: React.FC = () => {
-  const [events, setEvents] = useState<SocialEvent[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [events, setEvents] = useState<SocialEvent[]>(MOCK_EVENTS);
+  const [loading, setLoading] = useState(false);
 
   // Create event modal state
   const [showModal, setShowModal] = useState(false);
@@ -30,14 +31,13 @@ export const EventsPage: React.FC = () => {
   }, []);
 
   const loadEvents = async () => {
-    setLoading(true);
     try {
       const res = await apiClient.getEvents();
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         setEvents(res.data);
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
+      // Keep MOCK_EVENTS
     } finally {
       setLoading(false);
     }

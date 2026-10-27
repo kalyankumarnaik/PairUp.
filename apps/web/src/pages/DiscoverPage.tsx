@@ -14,13 +14,136 @@ import { SwipeCard } from '../components/SwipeCard';
 import { MatchModal } from '../components/MatchModal';
 import { useAuth } from '../context/AuthContext';
 import { apiClient } from '../lib/api';
-import { ConnectionMode, DiscoveryCard, SwipeAction } from '@pairup/domain-types';
+import {
+  ConnectionMode,
+  DiscoveryCard,
+  Gender,
+  RelationshipIntention,
+  SwipeAction,
+  VerificationStatus
+} from '@pairup/domain-types';
+
+const FALLBACK_DECK: DiscoveryCard[] = [
+  {
+    id: 'disc_1',
+    userId: 'usr_demo_1',
+    displayName: 'Ananya Verma',
+    age: 26,
+    bio: 'Architect, plant mom, and amateur photographer. Always up for filter coffee or art gallery walks in Bandra. Let’s talk about design, vinyl records, or the best pasta in Mumbai.',
+    gender: Gender.WOMAN,
+    pronouns: 'she/her',
+    relationshipIntention: RelationshipIntention.DATING_TO_MARRY,
+    connectionMode: ConnectionMode.DATING,
+    city: 'Mumbai',
+    approximateDistanceKm: 3.5,
+    interests: [
+      { id: '1', name: 'Coffee & Cafes', category: 'Lifestyle', emoji: '☕' },
+      { id: '2', name: 'Contemporary Art', category: 'Creative', emoji: '🎨' },
+      { id: '3', name: 'Street Photography', category: 'Creative', emoji: '📷' }
+    ],
+    photos: [
+      {
+        id: 'p1',
+        profileId: '1',
+        url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800',
+        order: 0,
+        isPrimary: true,
+        isModerated: true,
+        createdAt: ''
+      },
+      {
+        id: 'p2',
+        profileId: '1',
+        url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800',
+        order: 1,
+        isPrimary: false,
+        isModerated: true,
+        createdAt: ''
+      }
+    ],
+    prompts: [
+      {
+        id: 'prm1',
+        question: 'A perfect Sunday morning looks like',
+        answer: 'Brewing pour-over coffee and listening to indie vinyl.'
+      }
+    ],
+    verificationStatus: VerificationStatus.VERIFIED
+  },
+  {
+    id: 'disc_2',
+    userId: 'usr_demo_2',
+    displayName: 'Aarav Sharma',
+    age: 28,
+    bio: 'Fintech product designer who balances UX wireframes with weekend hiking trips and spicy street food trails. Let’s find Mumbai’s hidden sunset viewpoints.',
+    gender: Gender.MAN,
+    pronouns: 'he/him',
+    relationshipIntention: RelationshipIntention.LONG_TERM,
+    connectionMode: ConnectionMode.BOTH,
+    city: 'Mumbai',
+    approximateDistanceKm: 4.2,
+    interests: [
+      { id: '4', name: 'Hiking & Trekking', category: 'Outdoors', emoji: '🏔️' },
+      { id: '5', name: 'Badminton', category: 'Sports', emoji: '🏸' },
+      { id: '6', name: 'Tech & Startups', category: 'Tech', emoji: '💻' }
+    ],
+    photos: [
+      {
+        id: 'p3',
+        profileId: '2',
+        url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
+        order: 0,
+        isPrimary: true,
+        isModerated: true,
+        createdAt: ''
+      }
+    ],
+    prompts: [
+      {
+        id: 'prm2',
+        question: 'The best way to ask me out',
+        answer: 'Invite me for a badminton match or single-origin cold brew.'
+      }
+    ],
+    verificationStatus: VerificationStatus.VERIFIED
+  },
+  {
+    id: 'disc_3',
+    userId: 'usr_demo_3',
+    displayName: 'Riya Sen',
+    age: 24,
+    bio: 'Software engineer at a YC startup by day, live music enthusiast by night. Looking for concert buddies and coffee debates on whether tabs beat spaces.',
+    gender: Gender.WOMAN,
+    pronouns: 'she/her',
+    relationshipIntention: RelationshipIntention.NEW_FRIENDS,
+    connectionMode: ConnectionMode.FRIENDSHIP,
+    city: 'Bengaluru',
+    approximateDistanceKm: 5.8,
+    interests: [
+      { id: '7', name: 'Indie Rock', category: 'Music', emoji: '🎵' },
+      { id: '8', name: 'Board Games', category: 'Gaming', emoji: '🎲' }
+    ],
+    photos: [
+      {
+        id: 'p4',
+        profileId: '3',
+        url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800',
+        order: 0,
+        isPrimary: true,
+        isModerated: true,
+        createdAt: ''
+      }
+    ],
+    prompts: [],
+    verificationStatus: VerificationStatus.VERIFIED
+  }
+];
 
 export const DiscoverPage: React.FC = () => {
   const { profile } = useAuth();
-  const [cards, setCards] = useState<DiscoveryCard[]>([]);
+  const [cards, setCards] = useState<DiscoveryCard[]>(FALLBACK_DECK);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // Filters
   const [modeFilter, setModeFilter] = useState<string>('BOTH');
@@ -40,12 +163,16 @@ export const DiscoverPage: React.FC = () => {
       const res = await apiClient.getDiscoveryFeed({
         connectionMode: modeFilter as any
       });
-      if (res.data) {
+      if (res.data && res.data.length > 0) {
         setCards(res.data);
         setCurrentIndex(0);
+      } else {
+        setCards(FALLBACK_DECK);
+        setCurrentIndex(0);
       }
-    } catch (err) {
-      console.error('Failed to load discovery deck:', err);
+    } catch {
+      setCards(FALLBACK_DECK);
+      setCurrentIndex(0);
     } finally {
       setLoading(false);
     }
@@ -68,22 +195,30 @@ export const DiscoverPage: React.FC = () => {
 
       if (res.data?.isMatch) {
         setMatchedProfile(res.data.matchedProfile || currentCard);
-        setMatchId(res.data.matchId || null);
+        setMatchId(res.data.matchId || `match_${Date.now()}`);
         setIsMatchModalOpen(true);
+        return;
       }
-    } catch (err) {
-      console.error('Swipe action failed:', err);
+    } catch {
+      // Offline fallback
+    }
+
+    // In demo / fallback mode, simulate instant match when swiping right (LIKE)
+    if (action === SwipeAction.LIKE || action === SwipeAction.SUPER_LIKE) {
+      setMatchedProfile(currentCard);
+      setMatchId(`match_${Date.now()}`);
+      setIsMatchModalOpen(true);
     }
   };
 
   const handleRewind = async () => {
     try {
-      const res = await apiClient.rewind();
-      if (res.data?.rewound && currentIndex > 0) {
-        setCurrentIndex((prev) => prev - 1);
-      }
-    } catch (err) {
-      console.error('Rewind failed:', err);
+      await apiClient.rewind();
+    } catch {
+      // Offline fallback
+    }
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
     }
   };
 

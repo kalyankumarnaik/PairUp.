@@ -10,6 +10,11 @@ export const apiClient = new PairUpApiClient({
     else localStorage.removeItem('pairup_access_token');
   },
   onUnauthorized: () => {
+    const token = localStorage.getItem('pairup_access_token');
+    // If running in local demo / offline mode, don't clear session or redirect to auth
+    if (token?.startsWith('mock_token_')) {
+      return;
+    }
     localStorage.removeItem('pairup_access_token');
     if (!window.location.pathname.startsWith('/auth') && window.location.pathname !== '/') {
       window.location.href = '/auth';
