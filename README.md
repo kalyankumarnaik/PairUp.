@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PairUp AI — Full-Stack Dating, Friendship & Social Discovery Platform
 
 [![CI/CD](https://github.com/pairup-ai/pairup/actions/workflows/ci.yml/badge.svg)](https://github.com/pairup-ai/pairup/actions)
@@ -270,3 +271,7 @@ npm run test:cov
 - [Member 3 Real-time Chat Integration](docs/MEMBER3_CHAT_INTEGRATION.md)
 - [Member 4 AI Recommendation & Moderation Integration](docs/MEMBER4_AI_MODERATION_INTEGRATION.md)
 >>>>>>> 37fe79130ca3812bf9e2ca328140332eba3fcd6b
+=======
+# PairUp.
+AI-powered dating and relationship platform
+>>>>>>> 0e7255bea883cf7c7e6f12bf7b9227ce6d41566f
