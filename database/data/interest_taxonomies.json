@@ -1,0 +1,6002 @@
+[
+  {
+    "id": "tax_1",
+    "name": "Interest Subcategory #1",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 1,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_2",
+    "name": "Interest Subcategory #2",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 2,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_3",
+    "name": "Interest Subcategory #3",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 3,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_4",
+    "name": "Interest Subcategory #4",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 4,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_5",
+    "name": "Interest Subcategory #5",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 5,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_6",
+    "name": "Interest Subcategory #6",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 6,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_7",
+    "name": "Interest Subcategory #7",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 7,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_8",
+    "name": "Interest Subcategory #8",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 8,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_9",
+    "name": "Interest Subcategory #9",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 9,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_10",
+    "name": "Interest Subcategory #10",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 10,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_11",
+    "name": "Interest Subcategory #11",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 11,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_12",
+    "name": "Interest Subcategory #12",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 12,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_13",
+    "name": "Interest Subcategory #13",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 13,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_14",
+    "name": "Interest Subcategory #14",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 14,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_15",
+    "name": "Interest Subcategory #15",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 15,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_16",
+    "name": "Interest Subcategory #16",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 16,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_17",
+    "name": "Interest Subcategory #17",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 17,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_18",
+    "name": "Interest Subcategory #18",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 18,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_19",
+    "name": "Interest Subcategory #19",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 19,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_20",
+    "name": "Interest Subcategory #20",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 20,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_21",
+    "name": "Interest Subcategory #21",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 21,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_22",
+    "name": "Interest Subcategory #22",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 22,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_23",
+    "name": "Interest Subcategory #23",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 23,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_24",
+    "name": "Interest Subcategory #24",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 24,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_25",
+    "name": "Interest Subcategory #25",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 25,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_26",
+    "name": "Interest Subcategory #26",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 26,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_27",
+    "name": "Interest Subcategory #27",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 27,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_28",
+    "name": "Interest Subcategory #28",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 28,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_29",
+    "name": "Interest Subcategory #29",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 29,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_30",
+    "name": "Interest Subcategory #30",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 30,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_31",
+    "name": "Interest Subcategory #31",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 31,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_32",
+    "name": "Interest Subcategory #32",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 32,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_33",
+    "name": "Interest Subcategory #33",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 33,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_34",
+    "name": "Interest Subcategory #34",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 34,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_35",
+    "name": "Interest Subcategory #35",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 35,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_36",
+    "name": "Interest Subcategory #36",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 36,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_37",
+    "name": "Interest Subcategory #37",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 37,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_38",
+    "name": "Interest Subcategory #38",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 38,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_39",
+    "name": "Interest Subcategory #39",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 39,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_40",
+    "name": "Interest Subcategory #40",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 40,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_41",
+    "name": "Interest Subcategory #41",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 41,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_42",
+    "name": "Interest Subcategory #42",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 42,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_43",
+    "name": "Interest Subcategory #43",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 43,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_44",
+    "name": "Interest Subcategory #44",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 44,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_45",
+    "name": "Interest Subcategory #45",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 45,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_46",
+    "name": "Interest Subcategory #46",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 46,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_47",
+    "name": "Interest Subcategory #47",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 47,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_48",
+    "name": "Interest Subcategory #48",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 48,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_49",
+    "name": "Interest Subcategory #49",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 49,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_50",
+    "name": "Interest Subcategory #50",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 50,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_51",
+    "name": "Interest Subcategory #51",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 51,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_52",
+    "name": "Interest Subcategory #52",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 52,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_53",
+    "name": "Interest Subcategory #53",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 53,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_54",
+    "name": "Interest Subcategory #54",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 54,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_55",
+    "name": "Interest Subcategory #55",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 55,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_56",
+    "name": "Interest Subcategory #56",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 56,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_57",
+    "name": "Interest Subcategory #57",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 57,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_58",
+    "name": "Interest Subcategory #58",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 58,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_59",
+    "name": "Interest Subcategory #59",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 59,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_60",
+    "name": "Interest Subcategory #60",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 60,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_61",
+    "name": "Interest Subcategory #61",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 61,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_62",
+    "name": "Interest Subcategory #62",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 62,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_63",
+    "name": "Interest Subcategory #63",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 63,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_64",
+    "name": "Interest Subcategory #64",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 64,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_65",
+    "name": "Interest Subcategory #65",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 65,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_66",
+    "name": "Interest Subcategory #66",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 66,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_67",
+    "name": "Interest Subcategory #67",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 67,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_68",
+    "name": "Interest Subcategory #68",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 68,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_69",
+    "name": "Interest Subcategory #69",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 69,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_70",
+    "name": "Interest Subcategory #70",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 70,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_71",
+    "name": "Interest Subcategory #71",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 71,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_72",
+    "name": "Interest Subcategory #72",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 72,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_73",
+    "name": "Interest Subcategory #73",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 73,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_74",
+    "name": "Interest Subcategory #74",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 74,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_75",
+    "name": "Interest Subcategory #75",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 75,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_76",
+    "name": "Interest Subcategory #76",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 76,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_77",
+    "name": "Interest Subcategory #77",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 77,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_78",
+    "name": "Interest Subcategory #78",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 78,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_79",
+    "name": "Interest Subcategory #79",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 79,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_80",
+    "name": "Interest Subcategory #80",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 80,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_81",
+    "name": "Interest Subcategory #81",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 81,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_82",
+    "name": "Interest Subcategory #82",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 82,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_83",
+    "name": "Interest Subcategory #83",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 83,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_84",
+    "name": "Interest Subcategory #84",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 84,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_85",
+    "name": "Interest Subcategory #85",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 85,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_86",
+    "name": "Interest Subcategory #86",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 86,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_87",
+    "name": "Interest Subcategory #87",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 87,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_88",
+    "name": "Interest Subcategory #88",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 88,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_89",
+    "name": "Interest Subcategory #89",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 89,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_90",
+    "name": "Interest Subcategory #90",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 90,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_91",
+    "name": "Interest Subcategory #91",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 91,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_92",
+    "name": "Interest Subcategory #92",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 92,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_93",
+    "name": "Interest Subcategory #93",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 93,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_94",
+    "name": "Interest Subcategory #94",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 94,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_95",
+    "name": "Interest Subcategory #95",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 95,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_96",
+    "name": "Interest Subcategory #96",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 96,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_97",
+    "name": "Interest Subcategory #97",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 97,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_98",
+    "name": "Interest Subcategory #98",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 98,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_99",
+    "name": "Interest Subcategory #99",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 99,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_100",
+    "name": "Interest Subcategory #100",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 100,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_101",
+    "name": "Interest Subcategory #101",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 101,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_102",
+    "name": "Interest Subcategory #102",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 102,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_103",
+    "name": "Interest Subcategory #103",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 103,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_104",
+    "name": "Interest Subcategory #104",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 104,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_105",
+    "name": "Interest Subcategory #105",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 105,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_106",
+    "name": "Interest Subcategory #106",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 106,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_107",
+    "name": "Interest Subcategory #107",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 107,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_108",
+    "name": "Interest Subcategory #108",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 108,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_109",
+    "name": "Interest Subcategory #109",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 109,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_110",
+    "name": "Interest Subcategory #110",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 110,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_111",
+    "name": "Interest Subcategory #111",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 111,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_112",
+    "name": "Interest Subcategory #112",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 112,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_113",
+    "name": "Interest Subcategory #113",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 113,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_114",
+    "name": "Interest Subcategory #114",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 114,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_115",
+    "name": "Interest Subcategory #115",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 115,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_116",
+    "name": "Interest Subcategory #116",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 116,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_117",
+    "name": "Interest Subcategory #117",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 117,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_118",
+    "name": "Interest Subcategory #118",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 118,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_119",
+    "name": "Interest Subcategory #119",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 119,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_120",
+    "name": "Interest Subcategory #120",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 120,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_121",
+    "name": "Interest Subcategory #121",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 121,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_122",
+    "name": "Interest Subcategory #122",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 122,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_123",
+    "name": "Interest Subcategory #123",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 123,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_124",
+    "name": "Interest Subcategory #124",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 124,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_125",
+    "name": "Interest Subcategory #125",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 125,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_126",
+    "name": "Interest Subcategory #126",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 126,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_127",
+    "name": "Interest Subcategory #127",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 127,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_128",
+    "name": "Interest Subcategory #128",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 128,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_129",
+    "name": "Interest Subcategory #129",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 129,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_130",
+    "name": "Interest Subcategory #130",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 130,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_131",
+    "name": "Interest Subcategory #131",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 131,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_132",
+    "name": "Interest Subcategory #132",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 132,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_133",
+    "name": "Interest Subcategory #133",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 133,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_134",
+    "name": "Interest Subcategory #134",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 134,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_135",
+    "name": "Interest Subcategory #135",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 135,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_136",
+    "name": "Interest Subcategory #136",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 136,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_137",
+    "name": "Interest Subcategory #137",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 137,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_138",
+    "name": "Interest Subcategory #138",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 138,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_139",
+    "name": "Interest Subcategory #139",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 139,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_140",
+    "name": "Interest Subcategory #140",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 140,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_141",
+    "name": "Interest Subcategory #141",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 141,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_142",
+    "name": "Interest Subcategory #142",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 142,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_143",
+    "name": "Interest Subcategory #143",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 143,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_144",
+    "name": "Interest Subcategory #144",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 144,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_145",
+    "name": "Interest Subcategory #145",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 145,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_146",
+    "name": "Interest Subcategory #146",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 146,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_147",
+    "name": "Interest Subcategory #147",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 147,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_148",
+    "name": "Interest Subcategory #148",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 148,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_149",
+    "name": "Interest Subcategory #149",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 149,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_150",
+    "name": "Interest Subcategory #150",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 150,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_151",
+    "name": "Interest Subcategory #151",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 151,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_152",
+    "name": "Interest Subcategory #152",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 152,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_153",
+    "name": "Interest Subcategory #153",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 153,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_154",
+    "name": "Interest Subcategory #154",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 154,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_155",
+    "name": "Interest Subcategory #155",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 155,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_156",
+    "name": "Interest Subcategory #156",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 156,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_157",
+    "name": "Interest Subcategory #157",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 157,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_158",
+    "name": "Interest Subcategory #158",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 158,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_159",
+    "name": "Interest Subcategory #159",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 159,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_160",
+    "name": "Interest Subcategory #160",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 160,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_161",
+    "name": "Interest Subcategory #161",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 161,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_162",
+    "name": "Interest Subcategory #162",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 162,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_163",
+    "name": "Interest Subcategory #163",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 163,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_164",
+    "name": "Interest Subcategory #164",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 164,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_165",
+    "name": "Interest Subcategory #165",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 165,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_166",
+    "name": "Interest Subcategory #166",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 166,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_167",
+    "name": "Interest Subcategory #167",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 167,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_168",
+    "name": "Interest Subcategory #168",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 168,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_169",
+    "name": "Interest Subcategory #169",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 169,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_170",
+    "name": "Interest Subcategory #170",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 170,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_171",
+    "name": "Interest Subcategory #171",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 171,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_172",
+    "name": "Interest Subcategory #172",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 172,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_173",
+    "name": "Interest Subcategory #173",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 173,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_174",
+    "name": "Interest Subcategory #174",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 174,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_175",
+    "name": "Interest Subcategory #175",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 175,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_176",
+    "name": "Interest Subcategory #176",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 176,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_177",
+    "name": "Interest Subcategory #177",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 177,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_178",
+    "name": "Interest Subcategory #178",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 178,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_179",
+    "name": "Interest Subcategory #179",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 179,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_180",
+    "name": "Interest Subcategory #180",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 180,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_181",
+    "name": "Interest Subcategory #181",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 181,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_182",
+    "name": "Interest Subcategory #182",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 182,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_183",
+    "name": "Interest Subcategory #183",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 183,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_184",
+    "name": "Interest Subcategory #184",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 184,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_185",
+    "name": "Interest Subcategory #185",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 185,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_186",
+    "name": "Interest Subcategory #186",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 186,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_187",
+    "name": "Interest Subcategory #187",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 187,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_188",
+    "name": "Interest Subcategory #188",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 188,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_189",
+    "name": "Interest Subcategory #189",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 189,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_190",
+    "name": "Interest Subcategory #190",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 190,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_191",
+    "name": "Interest Subcategory #191",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 191,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_192",
+    "name": "Interest Subcategory #192",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 192,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_193",
+    "name": "Interest Subcategory #193",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 193,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_194",
+    "name": "Interest Subcategory #194",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 194,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_195",
+    "name": "Interest Subcategory #195",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 195,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_196",
+    "name": "Interest Subcategory #196",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 196,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_197",
+    "name": "Interest Subcategory #197",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 197,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_198",
+    "name": "Interest Subcategory #198",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 198,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_199",
+    "name": "Interest Subcategory #199",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 199,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_200",
+    "name": "Interest Subcategory #200",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 200,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_201",
+    "name": "Interest Subcategory #201",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 201,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_202",
+    "name": "Interest Subcategory #202",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 202,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_203",
+    "name": "Interest Subcategory #203",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 203,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_204",
+    "name": "Interest Subcategory #204",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 204,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_205",
+    "name": "Interest Subcategory #205",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 205,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_206",
+    "name": "Interest Subcategory #206",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 206,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_207",
+    "name": "Interest Subcategory #207",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 207,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_208",
+    "name": "Interest Subcategory #208",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 208,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_209",
+    "name": "Interest Subcategory #209",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 209,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_210",
+    "name": "Interest Subcategory #210",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 210,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_211",
+    "name": "Interest Subcategory #211",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 211,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_212",
+    "name": "Interest Subcategory #212",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 212,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_213",
+    "name": "Interest Subcategory #213",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 213,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_214",
+    "name": "Interest Subcategory #214",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 214,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_215",
+    "name": "Interest Subcategory #215",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 215,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_216",
+    "name": "Interest Subcategory #216",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 216,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_217",
+    "name": "Interest Subcategory #217",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 217,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_218",
+    "name": "Interest Subcategory #218",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 218,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_219",
+    "name": "Interest Subcategory #219",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 219,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_220",
+    "name": "Interest Subcategory #220",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 220,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_221",
+    "name": "Interest Subcategory #221",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 221,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_222",
+    "name": "Interest Subcategory #222",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 222,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_223",
+    "name": "Interest Subcategory #223",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 223,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_224",
+    "name": "Interest Subcategory #224",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 224,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_225",
+    "name": "Interest Subcategory #225",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 225,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_226",
+    "name": "Interest Subcategory #226",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 226,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_227",
+    "name": "Interest Subcategory #227",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 227,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_228",
+    "name": "Interest Subcategory #228",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 228,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_229",
+    "name": "Interest Subcategory #229",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 229,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_230",
+    "name": "Interest Subcategory #230",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 230,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_231",
+    "name": "Interest Subcategory #231",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 231,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_232",
+    "name": "Interest Subcategory #232",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 232,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_233",
+    "name": "Interest Subcategory #233",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 233,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_234",
+    "name": "Interest Subcategory #234",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 234,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_235",
+    "name": "Interest Subcategory #235",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 235,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_236",
+    "name": "Interest Subcategory #236",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 236,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_237",
+    "name": "Interest Subcategory #237",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 237,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_238",
+    "name": "Interest Subcategory #238",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 238,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_239",
+    "name": "Interest Subcategory #239",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 239,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_240",
+    "name": "Interest Subcategory #240",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 240,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_241",
+    "name": "Interest Subcategory #241",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 241,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_242",
+    "name": "Interest Subcategory #242",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 242,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_243",
+    "name": "Interest Subcategory #243",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 243,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_244",
+    "name": "Interest Subcategory #244",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 244,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_245",
+    "name": "Interest Subcategory #245",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 245,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_246",
+    "name": "Interest Subcategory #246",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 246,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_247",
+    "name": "Interest Subcategory #247",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 247,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_248",
+    "name": "Interest Subcategory #248",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 248,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_249",
+    "name": "Interest Subcategory #249",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 249,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_250",
+    "name": "Interest Subcategory #250",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 250,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_251",
+    "name": "Interest Subcategory #251",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 251,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_252",
+    "name": "Interest Subcategory #252",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 252,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_253",
+    "name": "Interest Subcategory #253",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 253,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_254",
+    "name": "Interest Subcategory #254",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 254,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_255",
+    "name": "Interest Subcategory #255",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 255,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_256",
+    "name": "Interest Subcategory #256",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 256,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_257",
+    "name": "Interest Subcategory #257",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 257,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_258",
+    "name": "Interest Subcategory #258",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 258,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_259",
+    "name": "Interest Subcategory #259",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 259,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_260",
+    "name": "Interest Subcategory #260",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 260,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_261",
+    "name": "Interest Subcategory #261",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 261,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_262",
+    "name": "Interest Subcategory #262",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 262,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_263",
+    "name": "Interest Subcategory #263",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 263,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_264",
+    "name": "Interest Subcategory #264",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 264,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_265",
+    "name": "Interest Subcategory #265",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 265,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_266",
+    "name": "Interest Subcategory #266",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 266,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_267",
+    "name": "Interest Subcategory #267",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 267,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_268",
+    "name": "Interest Subcategory #268",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 268,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_269",
+    "name": "Interest Subcategory #269",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 269,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_270",
+    "name": "Interest Subcategory #270",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 270,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_271",
+    "name": "Interest Subcategory #271",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 271,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_272",
+    "name": "Interest Subcategory #272",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 272,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_273",
+    "name": "Interest Subcategory #273",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 273,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_274",
+    "name": "Interest Subcategory #274",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 274,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_275",
+    "name": "Interest Subcategory #275",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 275,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_276",
+    "name": "Interest Subcategory #276",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 276,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_277",
+    "name": "Interest Subcategory #277",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 277,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_278",
+    "name": "Interest Subcategory #278",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 278,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_279",
+    "name": "Interest Subcategory #279",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 279,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_280",
+    "name": "Interest Subcategory #280",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 280,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_281",
+    "name": "Interest Subcategory #281",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 281,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_282",
+    "name": "Interest Subcategory #282",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 282,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_283",
+    "name": "Interest Subcategory #283",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 283,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_284",
+    "name": "Interest Subcategory #284",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 284,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_285",
+    "name": "Interest Subcategory #285",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 285,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_286",
+    "name": "Interest Subcategory #286",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 286,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_287",
+    "name": "Interest Subcategory #287",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 287,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_288",
+    "name": "Interest Subcategory #288",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 288,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_289",
+    "name": "Interest Subcategory #289",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 289,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_290",
+    "name": "Interest Subcategory #290",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 290,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_291",
+    "name": "Interest Subcategory #291",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 291,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_292",
+    "name": "Interest Subcategory #292",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 292,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_293",
+    "name": "Interest Subcategory #293",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 293,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_294",
+    "name": "Interest Subcategory #294",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 294,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_295",
+    "name": "Interest Subcategory #295",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 295,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_296",
+    "name": "Interest Subcategory #296",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 296,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_297",
+    "name": "Interest Subcategory #297",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 297,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_298",
+    "name": "Interest Subcategory #298",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 298,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_299",
+    "name": "Interest Subcategory #299",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 299,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_300",
+    "name": "Interest Subcategory #300",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 300,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_301",
+    "name": "Interest Subcategory #301",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 301,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_302",
+    "name": "Interest Subcategory #302",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 302,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_303",
+    "name": "Interest Subcategory #303",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 303,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_304",
+    "name": "Interest Subcategory #304",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 304,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_305",
+    "name": "Interest Subcategory #305",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 305,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_306",
+    "name": "Interest Subcategory #306",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 306,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_307",
+    "name": "Interest Subcategory #307",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 307,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_308",
+    "name": "Interest Subcategory #308",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 308,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_309",
+    "name": "Interest Subcategory #309",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 309,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_310",
+    "name": "Interest Subcategory #310",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 310,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_311",
+    "name": "Interest Subcategory #311",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 311,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_312",
+    "name": "Interest Subcategory #312",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 312,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_313",
+    "name": "Interest Subcategory #313",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 313,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_314",
+    "name": "Interest Subcategory #314",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 314,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_315",
+    "name": "Interest Subcategory #315",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 315,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_316",
+    "name": "Interest Subcategory #316",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 316,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_317",
+    "name": "Interest Subcategory #317",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 317,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_318",
+    "name": "Interest Subcategory #318",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 318,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_319",
+    "name": "Interest Subcategory #319",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 319,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_320",
+    "name": "Interest Subcategory #320",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 320,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_321",
+    "name": "Interest Subcategory #321",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 321,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_322",
+    "name": "Interest Subcategory #322",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 322,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_323",
+    "name": "Interest Subcategory #323",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 323,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_324",
+    "name": "Interest Subcategory #324",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 324,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_325",
+    "name": "Interest Subcategory #325",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 325,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_326",
+    "name": "Interest Subcategory #326",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 326,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_327",
+    "name": "Interest Subcategory #327",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 327,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_328",
+    "name": "Interest Subcategory #328",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 328,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_329",
+    "name": "Interest Subcategory #329",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 329,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_330",
+    "name": "Interest Subcategory #330",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 330,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_331",
+    "name": "Interest Subcategory #331",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 331,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_332",
+    "name": "Interest Subcategory #332",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 332,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_333",
+    "name": "Interest Subcategory #333",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 333,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_334",
+    "name": "Interest Subcategory #334",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 334,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_335",
+    "name": "Interest Subcategory #335",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 335,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_336",
+    "name": "Interest Subcategory #336",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 336,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_337",
+    "name": "Interest Subcategory #337",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 337,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_338",
+    "name": "Interest Subcategory #338",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 338,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_339",
+    "name": "Interest Subcategory #339",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 339,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_340",
+    "name": "Interest Subcategory #340",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 340,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_341",
+    "name": "Interest Subcategory #341",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 341,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_342",
+    "name": "Interest Subcategory #342",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 342,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_343",
+    "name": "Interest Subcategory #343",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 343,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_344",
+    "name": "Interest Subcategory #344",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 344,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_345",
+    "name": "Interest Subcategory #345",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 345,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_346",
+    "name": "Interest Subcategory #346",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 346,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_347",
+    "name": "Interest Subcategory #347",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 347,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_348",
+    "name": "Interest Subcategory #348",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 348,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_349",
+    "name": "Interest Subcategory #349",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 349,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_350",
+    "name": "Interest Subcategory #350",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 350,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_351",
+    "name": "Interest Subcategory #351",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 351,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_352",
+    "name": "Interest Subcategory #352",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 352,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_353",
+    "name": "Interest Subcategory #353",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 353,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_354",
+    "name": "Interest Subcategory #354",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 354,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_355",
+    "name": "Interest Subcategory #355",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 355,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_356",
+    "name": "Interest Subcategory #356",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 356,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_357",
+    "name": "Interest Subcategory #357",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 357,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_358",
+    "name": "Interest Subcategory #358",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 358,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_359",
+    "name": "Interest Subcategory #359",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 359,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_360",
+    "name": "Interest Subcategory #360",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 360,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_361",
+    "name": "Interest Subcategory #361",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 361,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_362",
+    "name": "Interest Subcategory #362",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 362,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_363",
+    "name": "Interest Subcategory #363",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 363,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_364",
+    "name": "Interest Subcategory #364",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 364,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_365",
+    "name": "Interest Subcategory #365",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 365,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_366",
+    "name": "Interest Subcategory #366",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 366,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_367",
+    "name": "Interest Subcategory #367",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 367,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_368",
+    "name": "Interest Subcategory #368",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 368,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_369",
+    "name": "Interest Subcategory #369",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 369,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_370",
+    "name": "Interest Subcategory #370",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 370,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_371",
+    "name": "Interest Subcategory #371",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 371,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_372",
+    "name": "Interest Subcategory #372",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 372,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_373",
+    "name": "Interest Subcategory #373",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 373,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_374",
+    "name": "Interest Subcategory #374",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 374,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_375",
+    "name": "Interest Subcategory #375",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 375,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_376",
+    "name": "Interest Subcategory #376",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 376,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_377",
+    "name": "Interest Subcategory #377",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 377,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_378",
+    "name": "Interest Subcategory #378",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 378,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_379",
+    "name": "Interest Subcategory #379",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 379,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_380",
+    "name": "Interest Subcategory #380",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 380,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_381",
+    "name": "Interest Subcategory #381",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 381,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_382",
+    "name": "Interest Subcategory #382",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 382,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_383",
+    "name": "Interest Subcategory #383",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 383,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_384",
+    "name": "Interest Subcategory #384",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 384,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_385",
+    "name": "Interest Subcategory #385",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 385,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_386",
+    "name": "Interest Subcategory #386",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 386,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_387",
+    "name": "Interest Subcategory #387",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 387,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_388",
+    "name": "Interest Subcategory #388",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 388,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_389",
+    "name": "Interest Subcategory #389",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 389,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_390",
+    "name": "Interest Subcategory #390",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 390,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_391",
+    "name": "Interest Subcategory #391",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 391,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_392",
+    "name": "Interest Subcategory #392",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 392,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_393",
+    "name": "Interest Subcategory #393",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 393,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_394",
+    "name": "Interest Subcategory #394",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 394,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_395",
+    "name": "Interest Subcategory #395",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 395,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_396",
+    "name": "Interest Subcategory #396",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 396,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_397",
+    "name": "Interest Subcategory #397",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 397,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_398",
+    "name": "Interest Subcategory #398",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 398,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_399",
+    "name": "Interest Subcategory #399",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 399,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_400",
+    "name": "Interest Subcategory #400",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 400,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_401",
+    "name": "Interest Subcategory #401",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 401,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_402",
+    "name": "Interest Subcategory #402",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 402,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_403",
+    "name": "Interest Subcategory #403",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 403,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_404",
+    "name": "Interest Subcategory #404",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 404,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_405",
+    "name": "Interest Subcategory #405",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 405,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_406",
+    "name": "Interest Subcategory #406",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 406,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_407",
+    "name": "Interest Subcategory #407",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 407,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_408",
+    "name": "Interest Subcategory #408",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 408,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_409",
+    "name": "Interest Subcategory #409",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 409,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_410",
+    "name": "Interest Subcategory #410",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 410,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_411",
+    "name": "Interest Subcategory #411",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 411,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_412",
+    "name": "Interest Subcategory #412",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 412,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_413",
+    "name": "Interest Subcategory #413",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 413,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_414",
+    "name": "Interest Subcategory #414",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 414,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_415",
+    "name": "Interest Subcategory #415",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 415,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_416",
+    "name": "Interest Subcategory #416",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 416,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_417",
+    "name": "Interest Subcategory #417",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 417,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_418",
+    "name": "Interest Subcategory #418",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 418,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_419",
+    "name": "Interest Subcategory #419",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 419,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_420",
+    "name": "Interest Subcategory #420",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 420,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_421",
+    "name": "Interest Subcategory #421",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 421,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_422",
+    "name": "Interest Subcategory #422",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 422,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_423",
+    "name": "Interest Subcategory #423",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 423,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_424",
+    "name": "Interest Subcategory #424",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 424,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_425",
+    "name": "Interest Subcategory #425",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 425,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_426",
+    "name": "Interest Subcategory #426",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 426,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_427",
+    "name": "Interest Subcategory #427",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 427,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_428",
+    "name": "Interest Subcategory #428",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 428,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_429",
+    "name": "Interest Subcategory #429",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 429,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_430",
+    "name": "Interest Subcategory #430",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 430,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_431",
+    "name": "Interest Subcategory #431",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 431,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_432",
+    "name": "Interest Subcategory #432",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 432,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_433",
+    "name": "Interest Subcategory #433",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 433,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_434",
+    "name": "Interest Subcategory #434",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 434,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_435",
+    "name": "Interest Subcategory #435",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 435,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_436",
+    "name": "Interest Subcategory #436",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 436,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_437",
+    "name": "Interest Subcategory #437",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 437,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_438",
+    "name": "Interest Subcategory #438",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 438,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_439",
+    "name": "Interest Subcategory #439",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 439,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_440",
+    "name": "Interest Subcategory #440",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 440,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_441",
+    "name": "Interest Subcategory #441",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 441,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_442",
+    "name": "Interest Subcategory #442",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 442,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_443",
+    "name": "Interest Subcategory #443",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 443,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_444",
+    "name": "Interest Subcategory #444",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 444,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_445",
+    "name": "Interest Subcategory #445",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 445,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_446",
+    "name": "Interest Subcategory #446",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 446,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_447",
+    "name": "Interest Subcategory #447",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 447,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_448",
+    "name": "Interest Subcategory #448",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 448,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_449",
+    "name": "Interest Subcategory #449",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 449,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_450",
+    "name": "Interest Subcategory #450",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 450,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_451",
+    "name": "Interest Subcategory #451",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 451,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_452",
+    "name": "Interest Subcategory #452",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 452,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_453",
+    "name": "Interest Subcategory #453",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 453,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_454",
+    "name": "Interest Subcategory #454",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 454,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_455",
+    "name": "Interest Subcategory #455",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 455,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_456",
+    "name": "Interest Subcategory #456",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 456,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_457",
+    "name": "Interest Subcategory #457",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 457,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_458",
+    "name": "Interest Subcategory #458",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 458,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_459",
+    "name": "Interest Subcategory #459",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 459,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_460",
+    "name": "Interest Subcategory #460",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 460,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_461",
+    "name": "Interest Subcategory #461",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 461,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_462",
+    "name": "Interest Subcategory #462",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 462,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_463",
+    "name": "Interest Subcategory #463",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 463,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_464",
+    "name": "Interest Subcategory #464",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 464,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_465",
+    "name": "Interest Subcategory #465",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 465,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_466",
+    "name": "Interest Subcategory #466",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 466,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_467",
+    "name": "Interest Subcategory #467",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 467,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_468",
+    "name": "Interest Subcategory #468",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 468,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_469",
+    "name": "Interest Subcategory #469",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 469,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_470",
+    "name": "Interest Subcategory #470",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 470,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_471",
+    "name": "Interest Subcategory #471",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 471,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_472",
+    "name": "Interest Subcategory #472",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 472,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_473",
+    "name": "Interest Subcategory #473",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 473,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_474",
+    "name": "Interest Subcategory #474",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 474,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_475",
+    "name": "Interest Subcategory #475",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 475,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_476",
+    "name": "Interest Subcategory #476",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 476,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_477",
+    "name": "Interest Subcategory #477",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 477,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_478",
+    "name": "Interest Subcategory #478",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 478,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_479",
+    "name": "Interest Subcategory #479",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 479,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_480",
+    "name": "Interest Subcategory #480",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 480,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_481",
+    "name": "Interest Subcategory #481",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 481,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_482",
+    "name": "Interest Subcategory #482",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 482,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_483",
+    "name": "Interest Subcategory #483",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 483,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_484",
+    "name": "Interest Subcategory #484",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 484,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_485",
+    "name": "Interest Subcategory #485",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 485,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_486",
+    "name": "Interest Subcategory #486",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 486,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_487",
+    "name": "Interest Subcategory #487",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 487,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_488",
+    "name": "Interest Subcategory #488",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 488,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_489",
+    "name": "Interest Subcategory #489",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 489,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_490",
+    "name": "Interest Subcategory #490",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 490,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_491",
+    "name": "Interest Subcategory #491",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 491,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_492",
+    "name": "Interest Subcategory #492",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 492,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  },
+  {
+    "id": "tax_493",
+    "name": "Interest Subcategory #493",
+    "category": "Fitness & Sports",
+    "emoji": "🔥",
+    "popularityRank": 493,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Mindfulness & Books",
+      "Gaming & Esports"
+    ]
+  },
+  {
+    "id": "tax_494",
+    "name": "Interest Subcategory #494",
+    "category": "Mindfulness & Books",
+    "emoji": "✨",
+    "popularityRank": 494,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Gaming & Esports",
+      "Outdoors & Adventure"
+    ]
+  },
+  {
+    "id": "tax_495",
+    "name": "Interest Subcategory #495",
+    "category": "Gaming & Esports",
+    "emoji": "🔥",
+    "popularityRank": 495,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Outdoors & Adventure",
+      "Music & Concerts"
+    ]
+  },
+  {
+    "id": "tax_496",
+    "name": "Interest Subcategory #496",
+    "category": "Outdoors & Adventure",
+    "emoji": "✨",
+    "popularityRank": 496,
+    "matchWeight": 1.1,
+    "compatibleCategories": [
+      "Music & Concerts",
+      "Culinary & Dining"
+    ]
+  },
+  {
+    "id": "tax_497",
+    "name": "Interest Subcategory #497",
+    "category": "Music & Concerts",
+    "emoji": "🔥",
+    "popularityRank": 497,
+    "matchWeight": 1.2,
+    "compatibleCategories": [
+      "Culinary & Dining",
+      "Creative Arts"
+    ]
+  },
+  {
+    "id": "tax_498",
+    "name": "Interest Subcategory #498",
+    "category": "Culinary & Dining",
+    "emoji": "✨",
+    "popularityRank": 498,
+    "matchWeight": 1.3,
+    "compatibleCategories": [
+      "Creative Arts",
+      "Tech & Innovation"
+    ]
+  },
+  {
+    "id": "tax_499",
+    "name": "Interest Subcategory #499",
+    "category": "Creative Arts",
+    "emoji": "🔥",
+    "popularityRank": 499,
+    "matchWeight": 1.4,
+    "compatibleCategories": [
+      "Tech & Innovation",
+      "Fitness & Sports"
+    ]
+  },
+  {
+    "id": "tax_500",
+    "name": "Interest Subcategory #500",
+    "category": "Tech & Innovation",
+    "emoji": "✨",
+    "popularityRank": 500,
+    "matchWeight": 1,
+    "compatibleCategories": [
+      "Fitness & Sports",
+      "Mindfulness & Books"
+    ]
+  }
+]
