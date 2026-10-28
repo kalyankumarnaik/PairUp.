@@ -53,6 +53,25 @@ const ProtectedLayout: React.FC<{ children: React.ReactNode; requireAdmin?: bool
   );
 };
 
+const SafetyRoute: React.FC = () => {
+  const { user } = useAuth();
+  if (user) {
+    return (
+      <ProtectedLayout>
+        <SafetyPage />
+      </ProtectedLayout>
+    );
+  }
+  return (
+    <div className="min-h-screen flex flex-col bg-cloud">
+      <Navbar />
+      <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 flex-1 w-full">
+        <SafetyPage />
+      </div>
+    </div>
+  );
+};
+
 export function App() {
   return (
     <AuthProvider>
@@ -77,17 +96,7 @@ export function App() {
               </div>
             }
           />
-          <Route
-            path="/safety"
-            element={
-              <div>
-                <Navbar />
-                <div className="max-w-7xl mx-auto p-4 sm:p-6">
-                  <SafetyPage />
-                </div>
-              </div>
-            }
-          />
+          <Route path="/safety" element={<SafetyRoute />} />
 
           {/* Protected Application Routes */}
           <Route

@@ -100,17 +100,19 @@ export const SwipeCard: React.FC<SwipeCardProps> = ({ card, isFront, onSwipe }) 
       {/* Animated Stamp: LIKE (Right Drag) */}
       <motion.div
         style={{ opacity: likeOpacity }}
-        className="absolute top-12 left-6 z-30 pointer-events-none border-4 border-success text-success font-display font-black text-3xl sm:text-4xl tracking-wider uppercase px-4 py-1.5 rounded-2xl rotate-[-15deg] bg-black/20 backdrop-blur-sm shadow-xl"
+        className="absolute top-12 left-6 z-30 pointer-events-none border-4 border-coral text-coral font-display font-black text-3xl sm:text-4xl tracking-wider uppercase px-4 py-1.5 rounded-2xl rotate-[-15deg] bg-black/40 backdrop-blur-md shadow-2xl shadow-coral/50 flex items-center gap-2"
       >
-        LIKE 💖
+        <span>LIKE</span>
+        <Heart className="w-8 h-8 fill-coral" />
       </motion.div>
 
       {/* Animated Stamp: PASS (Left Drag) */}
       <motion.div
         style={{ opacity: passOpacity }}
-        className="absolute top-12 right-6 z-30 pointer-events-none border-4 border-coral text-coral font-display font-black text-3xl sm:text-4xl tracking-wider uppercase px-4 py-1.5 rounded-2xl rotate-[15deg] bg-black/20 backdrop-blur-sm shadow-xl"
+        className="absolute top-12 right-6 z-30 pointer-events-none border-4 border-rose text-rose font-display font-black text-3xl sm:text-4xl tracking-wider uppercase px-4 py-1.5 rounded-2xl rotate-[15deg] bg-black/40 backdrop-blur-md shadow-2xl shadow-rose/50 flex items-center gap-2"
       >
-        PASS ✕
+        <span>PASS</span>
+        <X className="w-8 h-8 stroke-[3]" />
       </motion.div>
 
       {/* Card Information Layer */}

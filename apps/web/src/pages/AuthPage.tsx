@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Heart, KeyRound, Lock, Mail, Phone, ShieldCheck, User as UserIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Heart, KeyRound, Lock, Mail, Phone, ShieldCheck, Sparkles, User as UserIcon } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { calculateAge } from '@pairup/validation';
 
@@ -55,7 +56,7 @@ export const AuthPage: React.FC = () => {
       if (isSignup) {
         const age = calculateAge(birthDate);
         if (age < 18) {
-          setError('You must be at least 18 years old to join PairUp AI.');
+          setError('You must be at least 18 years old to join PairUp.');
           setLoading(false);
           return;
         }
@@ -113,50 +114,73 @@ export const AuthPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-65px)] flex items-center justify-center p-4 bg-cloud">
-      <div className="w-full max-w-md bg-white rounded-3xl border border-borderSoft shadow-xl p-6 sm:p-8">
+    <div className="relative min-h-[calc(100vh-65px)] flex items-center justify-center p-4 bg-cloud overflow-hidden">
+      {/* Animated Vibrant Background Glow Orbs */}
+      <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-gradient-to-tr from-coral/25 to-peach/25 blur-3xl pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-gradient-to-bl from-violet/25 to-cyan/25 blur-3xl pointer-events-none animate-float" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-amber/15 via-rose/15 to-violet/15 blur-3xl pointer-events-none" />
+
+      {/* Floating Sparkle Emojis */}
+      <span className="absolute top-16 right-1/4 text-2xl animate-float select-none pointer-events-none opacity-80">
+        💖
+      </span>
+      <span className="absolute bottom-20 left-1/4 text-2xl animate-float-slow select-none pointer-events-none opacity-80">
+        ✨
+      </span>
+
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="relative w-full max-w-md bg-white/95 backdrop-blur-xl rounded-3xl border border-white/60 shadow-2xl shadow-violet/15 p-6 sm:p-8 z-10"
+      >
         {/* Brand header */}
         <div className="text-center mb-6">
-          <div className="inline-flex w-12 h-12 rounded-2xl bg-gradient-to-tr from-coral to-violet items-center justify-center text-white shadow-md shadow-violet/20 mb-3">
-            <Heart className="w-6 h-6 fill-white" />
+          <div className="relative inline-flex w-14 h-14 rounded-2xl bg-gradient-to-tr from-coral via-violet to-peach items-center justify-center text-white shadow-lg shadow-coral/30 mb-3 group hover:scale-110 transition-transform">
+            <Heart className="w-7 h-7 fill-white animate-pulse" />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-peach opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-coral"></span>
+            </span>
           </div>
-          <h2 className="text-2xl font-display font-extrabold text-ink">
-            {isSignup ? 'Create Your Account' : 'Welcome Back'}
+          <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-ink">
+            {isSignup ? 'Create Your Account' : 'Welcome to PairUp'}
           </h2>
-          <p className="text-xs text-ink-muted mt-1">
+          <p className="text-xs text-ink-muted mt-1 font-medium">
             {isSignup
-              ? 'Adults 18+ only • Verified Dating & Social Discovery'
-              : 'Log in to connect with your matches'}
+              ? 'Adults 18+ only • Real Dating & Genuine Social Discovery'
+              : 'Log in to connect with your matches and friends'}
           </p>
         </div>
 
         {/* Demo Fast Login Buttons */}
-        <div className="p-3 rounded-2xl bg-lavender-light border border-violet/20 mb-5 text-xs text-violet-dark">
-          <p className="font-bold flex items-center gap-1.5 mb-1.5">
-            <span>✨ Quick Demo Accounts:</span>
+        <div className="p-3.5 rounded-2xl bg-gradient-to-r from-lavender-light via-peach-light/30 to-cyan-light/40 border border-violet/20 mb-5 text-xs text-violet-dark">
+          <p className="font-bold flex items-center gap-1.5 mb-2 text-ink">
+            <Sparkles className="w-3.5 h-3.5 text-coral" />
+            <span>✨ 1-Click Demo Accounts:</span>
           </p>
-          <div className="flex gap-2">
+          <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
               disabled={loading}
               onClick={() => handleQuickLogin('ananya.verma@example.com', 'Password123!')}
-              className="px-2.5 py-1 rounded-lg bg-white border border-violet/20 hover:border-violet font-semibold transition-colors shadow-xs"
+              className="px-2 py-1.5 rounded-xl bg-white/90 border border-coral/30 hover:border-coral text-ink hover:text-coral font-bold transition-all shadow-xs text-center hover:scale-105 active:scale-95"
             >
-              👩 Ananya (Mumbai)
+              👩 Ananya
             </button>
             <button
               type="button"
               disabled={loading}
               onClick={() => handleQuickLogin('aarav.sharma@example.com', 'Password123!')}
-              className="px-2.5 py-1 rounded-lg bg-white border border-violet/20 hover:border-violet font-semibold transition-colors shadow-xs"
+              className="px-2 py-1.5 rounded-xl bg-white/90 border border-violet/30 hover:border-violet text-ink hover:text-violet font-bold transition-all shadow-xs text-center hover:scale-105 active:scale-95"
             >
-              👨 Aarav (Mumbai)
+              👨 Aarav
             </button>
             <button
               type="button"
               disabled={loading}
               onClick={() => handleQuickLogin('admin@pairup.ai', 'AdminSecurePairUp2026!')}
-              className="px-2.5 py-1 rounded-lg bg-midnightInk text-white font-semibold transition-colors"
+              className="px-2 py-1.5 rounded-xl bg-midnightInk text-white border border-amber/40 hover:border-amber font-bold transition-all shadow-xs text-center hover:scale-105 active:scale-95"
             >
               🛡️ Admin
             </button>
@@ -164,7 +188,7 @@ export const AuthPage: React.FC = () => {
         </div>
 
         {error && (
-          <div className="p-3 rounded-xl bg-dangerRedLight/40 border border-dangerRed/30 text-dangerRed text-xs font-semibold mb-4">
+          <div className="p-3 rounded-xl bg-dangerRedLight/60 border border-dangerRed/30 text-dangerRed text-xs font-semibold mb-4 animate-shake">
             {error}
           </div>
         )}
@@ -237,9 +261,9 @@ export const AuthPage: React.FC = () => {
                 max="2008-01-01"
                 className="w-full px-4 py-2.5 rounded-xl bg-cloud border border-borderSoft focus:outline-none focus:border-violet text-sm font-medium"
               />
-              <p className="text-[11px] text-ink-muted mt-1 flex items-center gap-1">
+              <p className="text-[11px] text-ink-muted mt-1 flex items-center gap-1 font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5 text-success" />
-                <span>Age verified server-side: {calculateAge(birthDate)} years old</span>
+                <span>Verified: {calculateAge(birthDate)} years old</span>
               </p>
             </div>
           )}
@@ -247,9 +271,10 @@ export const AuthPage: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-coral to-violet shadow-md shadow-violet/20 hover:opacity-95 active:scale-[0.99] transition-all disabled:opacity-50 text-sm"
+            className="w-full py-3.5 rounded-2xl font-bold text-white bg-gradient-to-r from-coral via-violet to-peach shadow-lg shadow-coral/25 hover:opacity-95 hover:scale-[1.01] active:scale-[0.98] transition-all disabled:opacity-50 text-sm flex items-center justify-center gap-2"
           >
-            {loading ? 'Processing...' : isSignup ? 'Sign Up (18+)' : 'Log In'}
+            <Sparkles className="w-4 h-4" />
+            <span>{loading ? 'Connecting...' : isSignup ? 'Join PairUp (18+)' : 'Log In to PairUp'}</span>
           </button>
         </form>
 
@@ -268,7 +293,7 @@ export const AuthPage: React.FC = () => {
             </button>
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

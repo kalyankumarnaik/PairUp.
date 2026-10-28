@@ -135,6 +135,26 @@ export class PairUpApiClient {
     });
   }
 
+  async addPhotoUrl(url: string): Promise<ApiResponse<{ id: string; url: string }>> {
+    return this.request(API_ROUTES.PROFILES.UPLOAD_PHOTO, {
+      method: 'POST',
+      body: JSON.stringify({ url })
+    });
+  }
+
+  async deletePhoto(photoId: string): Promise<ApiResponse<{ deleted: boolean }>> {
+    return this.request(API_ROUTES.PROFILES.DELETE_PHOTO(photoId), {
+      method: 'DELETE'
+    });
+  }
+
+  async reorderPhotos(photoIds: string[]): Promise<ApiResponse<{ reordered: boolean }>> {
+    return this.request(API_ROUTES.PROFILES.REORDER_PHOTOS, {
+      method: 'POST',
+      body: JSON.stringify({ photoIds })
+    });
+  }
+
   // ---------------------------------------------------------------------------
   // LOCATION & NEARBY
   // ---------------------------------------------------------------------------
@@ -267,6 +287,39 @@ export class PairUpApiClient {
       method: 'POST',
       body: JSON.stringify({ targetUserId })
     });
+  }
+
+  // ---------------------------------------------------------------------------
+  // CALLS & SIGNALING
+  // ---------------------------------------------------------------------------
+  async initiateCall(
+    receiverId: string,
+    type: 'AUDIO' | 'VIDEO' = 'AUDIO'
+  ): Promise<ApiResponse<{ callId: string; status: string }>> {
+    return this.request(API_ROUTES.CALLS.INITIATE, {
+      method: 'POST',
+      body: JSON.stringify({ receiverId, type })
+    });
+  }
+
+  async respondCall(callId: string, accept: boolean): Promise<ApiResponse<any>> {
+    return this.request(API_ROUTES.CALLS.RESPOND(callId), {
+      method: 'POST',
+      body: JSON.stringify({ accept })
+    });
+  }
+
+  async endCall(callId: string): Promise<ApiResponse<{ ended: boolean }>> {
+    return this.request(API_ROUTES.CALLS.END(callId), {
+      method: 'POST'
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // AI SERVICES
+  // ---------------------------------------------------------------------------
+  async getIcebreakers(targetUserId: string): Promise<ApiResponse<{ icebreakers: string[] }>> {
+    return this.request(`${API_ROUTES.AI.ICEBREAKERS}?targetUserId=${targetUserId}`);
   }
 
   // ---------------------------------------------------------------------------

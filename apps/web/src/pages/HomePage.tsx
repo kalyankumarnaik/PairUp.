@@ -64,25 +64,128 @@ export const HomePage: React.FC = () => {
   return (
     <div className="space-y-8 pb-12">
       {/* Welcome Banner */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-violet via-coral to-peach text-white shadow-xl shadow-violet/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider mb-2">
-            <span>✨ Welcome back</span>
+      <div className="relative overflow-hidden p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-violet via-coral to-peach bg-[length:200%_200%] animate-gradient-xy text-white shadow-xl shadow-coral/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* Ambient floating orbs inside banner */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none -mr-16 -mt-16" />
+        <div className="absolute bottom-0 left-1/3 w-48 h-48 bg-coral/20 rounded-full blur-xl pointer-events-none" />
+
+        <div className="relative z-10">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-extrabold uppercase tracking-wider mb-2.5 shadow-sm">
+            <span className="animate-spin text-sm" style={{ animationDuration: '5s' }}>✨</span>
+            <span>Welcome back</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-display font-extrabold">
+          <h1 className="text-2xl sm:text-4xl font-display font-extrabold tracking-tight">
             Hello, {profile?.displayName || 'Explorer'}! 👋
           </h1>
-          <p className="text-xs sm:text-sm text-white/90 mt-1 max-w-xl">
-            {matches.length} active matches and new members waiting to meet you in {profile?.city || 'your area'}.
+          <p className="text-xs sm:text-sm text-white/95 mt-1.5 max-w-xl font-medium leading-relaxed">
+            {matches.length} active matches and new people nearby waiting to meet you in {profile?.city || 'Mumbai'}.
           </p>
         </div>
 
+        <div className="relative z-10 flex flex-wrap items-center gap-2.5 self-stretch sm:self-auto">
+          <Link
+            to="/discover"
+            className="flex-1 sm:flex-initial px-6 py-3.5 rounded-2xl bg-white text-violet hover:text-coral font-extrabold text-sm shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
+          >
+            <Sparkles className="w-4 h-4 text-coral animate-bounce" />
+            <span>Launch Swipe Deck</span>
+          </Link>
+          <Link
+            to="/rooms"
+            className="flex-1 sm:flex-initial px-5 py-3.5 rounded-2xl bg-white/20 backdrop-blur-md hover:bg-white/30 text-white font-bold text-sm shadow-sm hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
+          >
+            <Headphones className="w-4 h-4" />
+            <span>Audio Stage</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Live Activity Surge Banner */}
+      <div className="relative overflow-hidden p-5 rounded-3xl bg-gradient-to-r from-amber/15 via-coral/10 to-violet/10 border border-coral/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+        <div className="flex items-center gap-3.5">
+          <div className="relative flex items-center justify-center w-12 h-12 flex-shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-coral opacity-40"></span>
+            <span className="relative inline-flex rounded-2xl h-11 w-11 bg-gradient-to-tr from-amber via-coral to-rose items-center justify-center text-white shadow-md shadow-coral/30 text-xl font-bold">
+              ⚡
+            </span>
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded-full bg-coral text-white text-[10px] font-black uppercase tracking-wider animate-pulse">
+                LIVE ACTIVITY SURGE
+              </span>
+              <span className="text-xs font-bold text-coral">2.4x Match Probability 🔥</span>
+            </div>
+            <p className="text-xs sm:text-sm font-bold text-ink mt-0.5">
+              480+ verified members active in your area right now!
+            </p>
+            <p className="text-[11px] text-ink-muted">
+              Peak social discovery window: Profiles active now receive faster responses and instant connects.
+            </p>
+          </div>
+        </div>
+
         <Link
-          to="/discover"
-          className="px-6 py-3 rounded-2xl bg-white text-violet font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2 self-stretch sm:self-auto justify-center"
+          to="/nearby"
+          className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-coral to-violet text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 self-stretch sm:self-auto justify-center"
         >
-          <Sparkles className="w-4 h-4 text-coral" />
-          <span>Launch Swipe Deck</span>
+          <span>Join the Surge Radar</span>
+          <span>→</span>
+        </Link>
+      </div>
+
+      {/* Colorful Quick Discovery Shortcuts */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+        <Link
+          to="/discover?mode=DATING"
+          className="p-4 rounded-2xl bg-gradient-to-br from-coral-light to-rose-light/50 border border-coral/20 hover:border-coral hover:shadow-md transition-all flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-coral to-rose flex items-center justify-center text-white shadow-md shadow-coral/30 group-hover:scale-110 transition-transform">
+            <Heart className="w-5 h-5 fill-white" />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-ink group-hover:text-coral transition-colors">Dating Deck</p>
+            <p className="text-[10px] text-coral font-medium">Romantic Spark 💖</p>
+          </div>
+        </Link>
+
+        <Link
+          to="/discover?mode=FRIENDSHIP"
+          className="p-4 rounded-2xl bg-gradient-to-br from-violet-light to-lavender-light border border-violet/20 hover:border-violet hover:shadow-md transition-all flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet to-purple flex items-center justify-center text-white shadow-md shadow-violet/30 group-hover:scale-110 transition-transform">
+            <span className="text-lg">🫶</span>
+          </div>
+          <div>
+            <p className="text-xs font-bold text-ink group-hover:text-violet transition-colors">Find Friends</p>
+            <p className="text-[10px] text-violet font-medium">Genuine Bonds ✨</p>
+          </div>
+        </Link>
+
+        <Link
+          to="/nearby"
+          className="p-4 rounded-2xl bg-gradient-to-br from-peach-light to-amber-light/50 border border-peach/20 hover:border-peach hover:shadow-md transition-all flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-peach to-amber flex items-center justify-center text-white shadow-md shadow-peach/30 group-hover:scale-110 transition-transform">
+            <MapPin className="w-5 h-5" />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-ink group-hover:text-peach-dark transition-colors">Nearby Radar</p>
+            <p className="text-[10px] text-peach-dark font-medium">Radius 5–50km 📍</p>
+          </div>
+        </Link>
+
+        <Link
+          to="/rooms"
+          className="p-4 rounded-2xl bg-gradient-to-br from-cyan-light to-mint-light/50 border border-cyan/20 hover:border-cyan hover:shadow-md transition-all flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan to-mint flex items-center justify-center text-white shadow-md shadow-cyan/30 group-hover:scale-110 transition-transform">
+            <Headphones className="w-5 h-5" />
+          </div>
+          <div>
+            <p className="text-xs font-bold text-ink group-hover:text-cyan-dark transition-colors">Voice Rooms</p>
+            <p className="text-[10px] text-cyan-dark font-medium">Live Audio 🎧</p>
+          </div>
         </Link>
       </div>
 
@@ -225,9 +328,16 @@ export const HomePage: React.FC = () => {
                   </p>
                   <p className="text-[10px] text-ink-muted mt-0.5">Host: {room.hostName}</p>
                 </div>
-                <div className="flex items-center gap-1 text-[11px] font-bold text-violet px-2.5 py-1 rounded-full bg-white shadow-xs">
-                  <span className="w-2 h-2 rounded-full bg-coral animate-pulse"></span>
-                  <span>{room.activeCount} live</span>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-end gap-0.5 h-5 px-1 hidden sm:flex">
+                    <span className="w-1 bg-coral rounded-full equalizer-bar"></span>
+                    <span className="w-1 bg-violet rounded-full equalizer-bar"></span>
+                    <span className="w-1 bg-peach rounded-full equalizer-bar"></span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] font-bold text-violet px-2.5 py-1 rounded-full bg-white shadow-xs">
+                    <span className="w-2 h-2 rounded-full bg-coral animate-pulse"></span>
+                    <span>{room.activeCount} live</span>
+                  </div>
                 </div>
               </Link>
             ))}

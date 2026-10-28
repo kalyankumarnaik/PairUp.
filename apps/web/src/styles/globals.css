@@ -27,6 +27,53 @@
   background: linear-gradient(180deg, #F8F7FF 0%, #E9D5FF 100%);
 }
 
+.gradient-rainbow {
+  background: linear-gradient(135deg, #FF4F81 0%, #7C3AED 35%, #06B6D4 70%, #FF8A5B 100%);
+  background-size: 250% 250%;
+  animation: gradient-xy 8s ease infinite;
+}
+
+.gradient-electric-cyan {
+  background: linear-gradient(135deg, #06B6D4 0%, #7C3AED 100%);
+}
+
+.gradient-sunset-amber {
+  background: linear-gradient(135deg, #FF8A5B 0%, #F59E0B 100%);
+}
+
+.gradient-mint-emerald {
+  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+}
+
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.frosted-dark {
+  background: rgba(36, 32, 57, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Audio wave equalizer animation */
+.equalizer-bar {
+  animation: equalize 1.2s ease-in-out infinite alternate;
+}
+.equalizer-bar:nth-child(1) { animation-delay: 0.1s; }
+.equalizer-bar:nth-child(2) { animation-delay: 0.3s; }
+.equalizer-bar:nth-child(3) { animation-delay: 0.5s; }
+.equalizer-bar:nth-child(4) { animation-delay: 0.2s; }
+.equalizer-bar:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes equalize {
+  0% { height: 4px; }
+  100% { height: 22px; }
+}
+
 .card-shadow {
   box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.12);
 }

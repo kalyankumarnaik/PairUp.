@@ -139,18 +139,23 @@ export const RoomsPage: React.FC = () => {
             <div className="flex items-center gap-6 flex-wrap">
               {activeRoom.speakers.map((sp) => (
                 <div key={sp.userId} className="flex flex-col items-center">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden ring-4 ring-violet shadow-lg mb-2">
+                  <div className="flex items-end gap-0.5 h-4 mb-1">
+                    <span className="w-0.5 bg-coral rounded-full equalizer-bar"></span>
+                    <span className="w-0.5 bg-cyan rounded-full equalizer-bar"></span>
+                    <span className="w-0.5 bg-peach rounded-full equalizer-bar"></span>
+                  </div>
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden ring-4 ring-coral/80 shadow-lg shadow-coral/30 mb-2">
                     <img
                       src={sp.avatarUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200'}
                       alt=""
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute bottom-0 right-0 p-1 rounded-full bg-violet text-white">
+                    <div className="absolute bottom-0 right-0 p-1 rounded-full bg-coral text-white shadow">
                       <Mic className="w-3 h-3" />
                     </div>
                   </div>
                   <p className="text-xs font-bold text-white">{sp.displayName}</p>
-                  <span className="text-[10px] text-violet-light font-semibold uppercase">
+                  <span className="text-[10px] text-peach font-semibold uppercase">
                     {sp.role}
                   </span>
                 </div>
@@ -215,8 +220,12 @@ export const RoomsPage: React.FC = () => {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-3xl">{room.emoji}</span>
-                <span className="text-xs font-bold text-violet px-2.5 py-1 rounded-full bg-violet-light flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-coral animate-pulse" />
+                <span className="text-xs font-bold text-violet px-2.5 py-1 rounded-full bg-violet-light flex items-center gap-1.5 shadow-xs">
+                  <div className="flex items-end gap-0.5 h-3">
+                    <span className="w-0.5 bg-coral rounded-full equalizer-bar"></span>
+                    <span className="w-0.5 bg-cyan rounded-full equalizer-bar"></span>
+                    <span className="w-0.5 bg-peach rounded-full equalizer-bar"></span>
+                  </div>
                   <span>{room.activeCount} live</span>
                 </span>
               </div>
@@ -238,7 +247,7 @@ export const RoomsPage: React.FC = () => {
 
             <button
               onClick={() => handleJoinRoom(room)}
-              className="w-full py-2.5 rounded-xl font-bold text-xs bg-violet-light text-violet hover:bg-violet hover:text-white transition-all shadow-xs"
+              className="w-full py-2.5 rounded-xl font-bold text-xs bg-gradient-to-r from-violet to-cyan text-white hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-violet/20"
             >
               Join Audio Stage 🎧
             </button>

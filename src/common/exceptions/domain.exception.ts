@@ -1,0 +1,63 @@
+import { HttpException, HttpStatus } from '@nestjs/common';
+
+export enum DomainErrorCode {
+  // Authentication & Session
+  INVALID_CREDENTIALS = 'AUTH_INVALID_CREDENTIALS',
+  ACCOUNT_LOCKED = 'AUTH_ACCOUNT_LOCKED',
+  ACCOUNT_INACTIVE = 'AUTH_ACCOUNT_INACTIVE',
+  ACCOUNT_SUSPENDED = 'AUTH_ACCOUNT_SUSPENDED',
+  ACCOUNT_DELETED = 'AUTH_ACCOUNT_DELETED',
+  SESSION_EXPIRED = 'AUTH_SESSION_EXPIRED',
+  SESSION_REVOKED = 'AUTH_SESSION_REVOKED',
+  TOKEN_INVALID = 'AUTH_TOKEN_INVALID',
+  TOKEN_EXPIRED = 'AUTH_TOKEN_EXPIRED',
+  EMAIL_ALREADY_EXISTS = 'AUTH_EMAIL_ALREADY_EXISTS',
+  EMAIL_NOT_VERIFIED = 'AUTH_EMAIL_NOT_VERIFIED',
+
+  // Profile & Preferences
+  PROFILE_NOT_FOUND = 'PROFILE_NOT_FOUND',
+  PROFILE_ALREADY_EXISTS = 'PROFILE_ALREADY_EXISTS',
+  UNDERAGE_RESTRICTION = 'PROFILE_UNDERAGE_RESTRICTION',
+  PROFILE_INCOMPLETE = 'PROFILE_INCOMPLETE',
+  PHOTO_LIMIT_EXCEEDED = 'PROFILE_PHOTO_LIMIT_EXCEEDED',
+  PROMPT_LIMIT_EXCEEDED = 'PROFILE_PROMPT_LIMIT_EXCEEDED',
+
+  // Discovery & Matching
+  SELF_ACTION_NOT_ALLOWED = 'MATCH_SELF_ACTION_NOT_ALLOWED',
+  TARGET_NOT_FOUND = 'MATCH_TARGET_NOT_FOUND',
+  ALREADY_INTERACTED = 'MATCH_ALREADY_INTERACTED',
+  USER_IS_BLOCKED = 'MATCH_USER_IS_BLOCKED',
+  MATCH_NOT_FOUND = 'MATCH_NOT_FOUND',
+  MATCH_ALREADY_CLOSED = 'MATCH_ALREADY_CLOSED',
+  CONCURRENT_MATCH_CONFLICT = 'MATCH_CONCURRENT_CONFLICT',
+
+  // Safety & Moderation
+  CANNOT_BLOCK_SELF = 'SAFETY_CANNOT_BLOCK_SELF',
+  ALREADY_BLOCKED = 'SAFETY_ALREADY_BLOCKED',
+  FORBIDDEN_RESOURCE = 'ACCESS_FORBIDDEN',
+  RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND',
+}
+
+export class DomainException extends HttpException {
+  public readonly errorCode: DomainErrorCode;
+  public readonly details?: unknown;
+
+  constructor(
+    message: string,
+    errorCode: DomainErrorCode,
+    status: HttpStatus = HttpStatus.BAD_REQUEST,
+    details?: unknown,
+  ) {
+    super(
+      {
+        statusCode: status,
+        error: errorCode,
+        message,
+        details,
+      },
+      status,
+    );
+    this.errorCode = errorCode;
+    this.details = details;
+  }
+}

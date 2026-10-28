@@ -53,6 +53,13 @@ export const API_ROUTES = {
     UPLOAD_VOICE: `${API_PREFIX}/chat/upload-voice`
   },
 
+  // Calls & Signaling
+  CALLS: {
+    INITIATE: `${API_PREFIX}/calls/initiate`,
+    RESPOND: (id: string) => `${API_PREFIX}/calls/${id}/respond`,
+    END: (id: string) => `${API_PREFIX}/calls/${id}/end`
+  },
+
   // Voice Rooms & Communities
   ROOMS: {
     LIST: `${API_PREFIX}/rooms`,

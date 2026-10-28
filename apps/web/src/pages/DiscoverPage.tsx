@@ -332,7 +332,7 @@ export const DiscoverPage: React.FC = () => {
           onClick={handleRewind}
           disabled={currentIndex === 0}
           title="Rewind"
-          className="w-12 h-12 rounded-full bg-white border border-borderSoft text-warningAmber hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center disabled:opacity-40 disabled:hover:scale-100"
+          className="w-12 h-12 rounded-full bg-white border-2 border-amber/30 text-amber hover:bg-amber-light hover:border-amber hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center disabled:opacity-40 disabled:hover:scale-100"
         >
           <RotateCcw className="w-5 h-5" />
         </button>
@@ -342,9 +342,9 @@ export const DiscoverPage: React.FC = () => {
           onClick={() => handleSwipe(SwipeAction.PASS)}
           disabled={currentIndex >= cards.length}
           title="Pass"
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border border-borderSoft text-coral hover:bg-coral-light hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center disabled:opacity-40"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-2 border-rose/30 text-rose hover:bg-rose-light hover:border-rose hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center disabled:opacity-40"
         >
-          <X className="w-7 h-7 sm:w-8 sm:h-8" />
+          <X className="w-7 h-7 sm:w-8 sm:h-8 stroke-[2.5]" />
         </button>
 
         {/* Super Like */}
@@ -352,9 +352,9 @@ export const DiscoverPage: React.FC = () => {
           onClick={() => handleSwipe(SwipeAction.SUPER_LIKE)}
           disabled={currentIndex >= cards.length}
           title="Super Like"
-          className="w-12 h-12 rounded-full bg-white border border-borderSoft text-sky-500 hover:bg-sky-50 hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center disabled:opacity-40"
+          className="w-12 h-12 rounded-full bg-white border-2 border-cyan/40 text-cyan hover:bg-cyan-light hover:border-cyan hover:scale-110 active:scale-95 transition-all shadow-md shadow-cyan/10 flex items-center justify-center disabled:opacity-40"
         >
-          <Star className="w-5 h-5 fill-sky-500" />
+          <Star className="w-5 h-5 fill-cyan" />
         </button>
 
         {/* Like (Right) */}
@@ -362,16 +362,16 @@ export const DiscoverPage: React.FC = () => {
           onClick={() => handleSwipe(SwipeAction.LIKE)}
           disabled={currentIndex >= cards.length}
           title="Like"
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-coral to-violet text-white hover:scale-110 active:scale-95 transition-all shadow-xl shadow-coral/30 flex items-center justify-center disabled:opacity-40"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-coral via-rose to-violet text-white hover:scale-110 active:scale-95 transition-all shadow-xl shadow-coral/35 hover:shadow-coralGlow flex items-center justify-center disabled:opacity-40 group"
         >
-          <Heart className="w-7 h-7 sm:w-8 sm:h-8 fill-white" />
+          <Heart className="w-7 h-7 sm:w-8 sm:h-8 fill-white group-hover:scale-110 group-hover:animate-pulse transition-transform" />
         </button>
 
         {/* Fast Boost */}
         <button
           onClick={() => alert('Profile boosted! You are now featured at the top of nearby decks for 30 minutes 🚀')}
           title="Boost"
-          className="w-12 h-12 rounded-full bg-white border border-borderSoft text-violet hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center"
+          className="w-12 h-12 rounded-full bg-white border-2 border-violet/30 text-violet hover:bg-violet-light hover:border-violet hover:scale-110 active:scale-95 transition-all shadow-md flex items-center justify-center"
         >
           <Zap className="w-5 h-5 fill-violet" />
         </button>

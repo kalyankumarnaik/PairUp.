@@ -174,11 +174,24 @@ export const EventsPage: React.FC = () => {
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-2">
-                      <Users className="w-3.5 h-3.5 text-peach" />
-                      <span>
-                        {evt.registeredCount} of {evt.capacity} spots filled
-                      </span>
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-[11px] font-semibold text-ink-muted">
+                        <span className="flex items-center gap-1.5">
+                          <Users className="w-3.5 h-3.5 text-peach" />
+                          <span>Spots Filled</span>
+                        </span>
+                        <span className="font-bold text-violet">
+                          {evt.registeredCount} / {evt.capacity}
+                        </span>
+                      </div>
+                      <div className="w-full h-2 rounded-full bg-cloud border border-borderSoft overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-peach via-coral to-violet transition-all duration-500 rounded-full"
+                          style={{
+                            width: `${Math.min(100, Math.round((evt.registeredCount / evt.capacity) * 100))}%`
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -189,17 +202,17 @@ export const EventsPage: React.FC = () => {
                     disabled={isFull && !evt.isRegistered}
                     className={`w-full py-2.5 rounded-xl text-xs font-bold transition-all shadow-xs ${
                       evt.isRegistered
-                        ? 'bg-success text-white'
+                        ? 'bg-gradient-to-r from-mint to-success text-white shadow-md shadow-success/20'
                         : isFull
                         ? 'bg-ink-muted/30 text-ink-muted cursor-not-allowed'
-                        : 'bg-violet text-white hover:bg-violet-hover'
+                        : 'bg-gradient-to-r from-coral to-violet text-white hover:opacity-95 shadow-md shadow-coral/20 hover:scale-[1.02] active:scale-[0.98]'
                     }`}
                   >
                     {evt.isRegistered
-                      ? '✓ Registered (Cancel)'
+                      ? '✓ Attending (Cancel RSVP)'
                       : isFull
                       ? 'Event Full'
-                      : 'RSVP & Join Event'}
+                      : 'RSVP & Join Event ✨'}
                   </button>
                 </div>
               </div>

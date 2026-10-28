@@ -22,6 +22,10 @@ interface AuthContextType {
   verifyOtp: (identifier: string, code: string) => Promise<{ success: boolean; message?: string }>;
   logout: () => void;
   refreshProfile: () => Promise<void>;
+  updateProfile: (updates: Partial<UserProfile>) => Promise<boolean>;
+  addPhoto: (url: string) => Promise<void>;
+  deletePhoto: (photoId: string) => Promise<void>;
+  setPrimaryPhoto: (photoId: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -382,6 +386,104 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setProfile(null);
   };
 
+  const addPhoto = async (url: string) => {
+    try {
+      await apiClient.addPhotoUrl(url);
+    } catch {
+      // Offline fallback
+    }
+
+    if (profile) {
+      const isFirst = !profile.photos || profile.photos.length === 0;
+      const newPhoto = {
+        id: `pht_${Date.now()}`,
+        profileId: profile.id,
+        url,
+        order: profile.photos?.length || 0,
+        isPrimary: isFirst,
+        isModerated: true,
+        createdAt: new Date().toISOString()
+      };
+      const updatedPhotos = [...(profile.photos || []), newPhoto];
+      const updatedProfile = { ...profile, photos: updatedPhotos };
+      setProfile(updatedProfile);
+      localStorage.setItem('pairup_profile', JSON.stringify(updatedProfile));
+    }
+  };
+
+  const deletePhoto = async (photoId: string) => {
+    try {
+      await apiClient.deletePhoto(photoId);
+    } catch {
+      // Offline fallback
+    }
+
+    if (profile && profile.photos) {
+      const remaining = profile.photos.filter((p) => p.id !== photoId);
+      // If we deleted the primary photo and there are still photos, designate the first one as primary
+      if (remaining.length > 0 && !remaining.some((p) => p.isPrimary)) {
+        remaining[0].isPrimary = true;
+      }
+      const updatedProfile = { ...profile, photos: remaining };
+      setProfile(updatedProfile);
+      localStorage.setItem('pairup_profile', JSON.stringify(updatedProfile));
+    }
+  };
+
+  const setPrimaryPhoto = async (photoId: string) => {
+    if (profile && profile.photos) {
+      const updatedPhotos = profile.photos.map((p) => ({
+        ...p,
+        isPrimary: p.id === photoId
+      }));
+      const updatedProfile = { ...profile, photos: updatedPhotos };
+      setProfile(updatedProfile);
+      localStorage.setItem('pairup_profile', JSON.stringify(updatedProfile));
+
+      try {
+        const primary = updatedPhotos.find((p) => p.id === photoId);
+        const rest = updatedPhotos.filter((p) => p.id !== photoId);
+        const ordered = primary ? [primary, ...rest] : updatedPhotos;
+        await apiClient.reorderPhotos(ordered.map((p) => p.id));
+      } catch {
+        // Offline fallback
+      }
+    }
+  };
+
+  const updateProfile = async (updates: Partial<UserProfile>): Promise<boolean> => {
+    if (profile) {
+      const updatedProfile: UserProfile = {
+        ...profile,
+        ...updates,
+        updatedAt: new Date().toISOString()
+      };
+      setProfile(updatedProfile);
+      localStorage.setItem('pairup_profile', JSON.stringify(updatedProfile));
+    }
+
+    if (user && updates.displayName) {
+      const updatedUser = {
+        ...user,
+        displayName: updates.displayName
+      };
+      setUser(updatedUser);
+      localStorage.setItem('pairup_user', JSON.stringify(updatedUser));
+    }
+
+    try {
+      const res = await apiClient.updateProfile(updates as any);
+      if (res.success && res.data) {
+        setProfile(res.data);
+        localStorage.setItem('pairup_profile', JSON.stringify(res.data));
+      }
+    } catch {
+      // Offline fallback already updated in local state and storage
+    }
+
+    return true;
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -394,7 +496,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         signup,
         verifyOtp,
         logout,
-        refreshProfile
+        refreshProfile,
+        updateProfile,
+        addPhoto,
+        deletePhoto,
+        setPrimaryPhoto
       }}
     >
       {children}

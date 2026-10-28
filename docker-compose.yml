@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: pairup-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pairup_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pairup_password}
+      POSTGRES_DB: ${POSTGRES_DB:-pairup_db}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pairup_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pairup_user} -d ${POSTGRES_DB:-pairup_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - pairup-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: pairup-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - pairup_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - pairup-network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: pairup-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      API_PREFIX: /api/v1
+      DATABASE_URL: postgresql://${POSTGRES_USER:-pairup_user}:${POSTGRES_PASSWORD:-pairup_password}@postgres:5432/${POSTGRES_DB:-pairup_db}?schema=public
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-pairup_dev_jwt_access_secret_super_secure_key_12345}
+      JWT_ACCESS_EXPIRATION: 15m
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-pairup_dev_jwt_refresh_secret_super_secure_key_67890}
+      JWT_REFRESH_EXPIRATION: 7d
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - pairup-network
+
+networks:
+  pairup-network:
+    driver: bridge
+
+volumes:
+  pairup_postgres_data:
+  pairup_redis_data:
