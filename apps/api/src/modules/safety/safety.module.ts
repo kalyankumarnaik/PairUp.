@@ -7,7 +7,7 @@ import { MemoryStoreService } from '../../common/database/memory-store.service';
 @Module({
   imports: [AuthModule],
   controllers: [SafetyController],
-  providers: [SafetyService, MemoryStoreService],
+  providers: [SafetyService],
   exports: [SafetyService]
 })
 export class SafetyModule {}

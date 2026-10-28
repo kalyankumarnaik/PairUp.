@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import {
   Calendar,
   Compass,
+  Crown,
   Headphones,
   Heart,
   Home,
@@ -10,8 +11,10 @@ import {
   MessageCircle,
   Shield,
   ShieldAlert,
+  Sliders,
   Sparkles,
-  User
+  User,
+  Users
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -21,13 +24,17 @@ export const Sidebar: React.FC = () => {
   const links = [
     { to: '/home', label: 'Home', icon: Home },
     { to: '/discover', label: 'Swipe Discover', icon: Sparkles, badge: 'Deck' },
-    { to: '/nearby', label: 'Nearby People', icon: MapPin },
+    { to: '/nearby', label: 'Nearby Radar', icon: MapPin },
+    { to: '/likes', label: 'Likes Received', icon: Crown, badge: 'Gold' },
     { to: '/matches', label: 'Matches', icon: Heart },
     { to: '/messages', label: 'Messages', icon: MessageCircle },
     { to: '/rooms', label: 'Voice Rooms', icon: Headphones, badge: 'Live' },
+    { to: '/communities', label: 'Communities', icon: Users },
     { to: '/events', label: 'Social Events', icon: Calendar },
     { to: '/profile', label: 'My Profile', icon: User },
-    { to: '/safety', label: 'Safety Center', icon: Shield }
+    { to: '/safety', label: 'Safety Center', icon: Shield },
+    { to: '/subscription', label: 'Subscription', icon: Crown },
+    { to: '/settings', label: 'Settings', icon: Sliders }
   ];
 
   const isAdmin = user?.role === 'ADMIN' || user?.role === 'SUPER_ADMIN' || user?.role === 'MODERATOR';

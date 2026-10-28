@@ -51,6 +51,20 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <Text style={{ fontSize: 20 }}>🎧</Text>
         }}
       />
+      <Tabs.Screen
+        name="safety"
+        options={{
+          title: 'Safety',
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20 }}>🛡️</Text>
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 20 }}>👤</Text>
+        }}
+      />
     </Tabs>
   );
 }

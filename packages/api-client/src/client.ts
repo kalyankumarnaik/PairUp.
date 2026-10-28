@@ -343,4 +343,173 @@ export class PairUpApiClient {
       body: JSON.stringify({ action, notes })
     });
   }
+
+  // ---------------------------------------------------------------------------
+  // SUBSCRIPTIONS & BILLING
+  // ---------------------------------------------------------------------------
+  async getSubscriptionPlans(): Promise<ApiResponse<any[]>> {
+    return this.request('/api/v1/subscriptions/plans');
+  }
+
+  async getMySubscription(): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/subscriptions/me');
+  }
+
+  async upgradeSubscription(data: {
+    tier: string;
+    paymentMethod?: string;
+    promoCode?: string;
+  }): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/subscriptions/upgrade', {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+  }
+
+  async getBillingInvoices(): Promise<ApiResponse<any[]>> {
+    return this.request('/api/v1/subscriptions/invoices');
+  }
+
+  async cancelSubscription(): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/subscriptions/cancel', {
+      method: 'POST'
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // COMMUNITIES & CLUBS
+  // ---------------------------------------------------------------------------
+  async getCommunities(): Promise<ApiResponse<any[]>> {
+    return this.request('/api/v1/communities');
+  }
+
+  async getCommunityById(id: string): Promise<ApiResponse<any>> {
+    return this.request(`/api/v1/communities/${id}`);
+  }
+
+  async toggleJoinCommunity(id: string): Promise<ApiResponse<{ joined: boolean; memberCount: number }>> {
+    return this.request(`/api/v1/communities/${id}/join`, {
+      method: 'POST'
+    });
+  }
+
+  async getCommunityPosts(communityId: string): Promise<ApiResponse<any[]>> {
+    return this.request(`/api/v1/communities/${communityId}/posts`);
+  }
+
+  async createCommunityPost(
+    communityId: string,
+    title: string,
+    content: string
+  ): Promise<ApiResponse<any>> {
+    return this.request(`/api/v1/communities/${communityId}/posts`, {
+      method: 'POST',
+      body: JSON.stringify({ title, content })
+    });
+  }
+
+  async toggleUpvoteCommunityPost(postId: string): Promise<ApiResponse<{ upvoted: boolean }>> {
+    return this.request(`/api/v1/communities/posts/${postId}/upvote`, {
+      method: 'POST'
+    });
+  }
+
+  async getCommunityComments(postId: string): Promise<ApiResponse<any[]>> {
+    return this.request(`/api/v1/communities/posts/${postId}/comments`);
+  }
+
+  async addCommunityComment(postId: string, content: string): Promise<ApiResponse<any>> {
+    return this.request(`/api/v1/communities/posts/${postId}/comments`, {
+      method: 'POST',
+      body: JSON.stringify({ content })
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // ACTIVITY SURGE & BOOST
+  // ---------------------------------------------------------------------------
+  async getActiveSurges(city?: string): Promise<ApiResponse<any[]>> {
+    const q = city ? `?city=${encodeURIComponent(city)}` : '';
+    return this.request(`/api/v1/surge/active${q}`);
+  }
+
+  async checkSurgeCoordinates(lat: number, lng: number): Promise<ApiResponse<any>> {
+    return this.request(`/api/v1/surge/current-location?lat=${lat}&lng=${lng}`);
+  }
+
+  async activateProfileBoost(): Promise<ApiResponse<{ success: boolean; multiplier: number; durationMinutes: number }>> {
+    return this.request('/api/v1/surge/boost', {
+      method: 'POST'
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // NOTIFICATIONS
+  // ---------------------------------------------------------------------------
+  async getNotifications(): Promise<ApiResponse<{ items: any[]; unreadCount: number }>> {
+    return this.request('/api/v1/notifications');
+  }
+
+  async markNotificationRead(id: string): Promise<ApiResponse<{ success: boolean }>> {
+    return this.request(`/api/v1/notifications/${id}/read`, {
+      method: 'POST'
+    });
+  }
+
+  async markAllNotificationsRead(): Promise<ApiResponse<{ markedCount: number }>> {
+    return this.request('/api/v1/notifications/read-all', {
+      method: 'POST'
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // DATE GUARD SAFETY & WEBRTC SIGNALING
+  // ---------------------------------------------------------------------------
+  async createDateGuard(data: {
+    partnerName: string;
+    venue: string;
+    emergencyContact: string;
+    durationMinutes: number;
+  }): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/safety/date-guard', {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+  }
+
+  async confirmDateCheckIn(guardId: string, extendMinutes: number = 0): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/safety/check-in', {
+      method: 'POST',
+      body: JSON.stringify({ guardId, extendMinutes })
+    });
+  }
+
+  async triggerEmergencySos(
+    guardId: string,
+    coordinates?: { latitude: number; longitude: number }
+  ): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/safety/sos', {
+      method: 'POST',
+      body: JSON.stringify({ guardId, coordinates })
+    });
+  }
+
+  async getTurnCredentials(): Promise<ApiResponse<any>> {
+    return this.request('/api/v1/calls/turn-credentials');
+  }
+
+  async sendCallSignal(
+    callId: string,
+    payload: { type: string; sdp?: string; candidate?: any }
+  ): Promise<ApiResponse<any>> {
+    return this.request(`/api/v1/calls/${callId}/signal`, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+  }
+
+  async getCallSignals(callId: string, sinceIso?: string): Promise<ApiResponse<any[]>> {
+    const q = sinceIso ? `?since=${encodeURIComponent(sinceIso)}` : '';
+    return this.request(`/api/v1/calls/${callId}/signals${q}`);
+  }
 }

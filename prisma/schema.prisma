@@ -464,3 +464,253 @@ model AuditLog {
   @@index([createdAt])
   @@map("audit_logs")
 }
+
+
+// ----------------------------------------------------------------------------
+// Date Guard & Safety Watchdog
+// ----------------------------------------------------------------------------
+
+enum DateGuardStatus {
+  SCHEDULED
+  ACTIVE
+  EXTENDED
+  COMPLETED
+  OVERDUE
+  SOS_TRIGGERED
+}
+
+enum ReportCategory {
+  HARASSMENT
+  UNDERAGE_SOLICITATION
+  FAKE_PROFILE
+  FINANCIAL_SCAM
+  OFFLINE_SAFETY_THREAT
+  INAPPROPRIATE_MEDIA
+  OTHER
+}
+
+enum ReportStatus {
+  PENDING
+  INVESTIGATING
+  RESOLVED
+  DISMISSED
+}
+
+model DateGuardSession {
+  id                    String          @id @default(uuid())
+  userId                String
+  companionName         String
+  dateLocation          String
+  emergencyContactName  String
+  emergencyContactPhone String
+  safetyNotes           String?
+  scheduledEndAt        DateTime
+  status                DateGuardStatus @default(ACTIVE)
+  checkInCount          Int             @default(0)
+  lastCheckInAt         DateTime?
+  sosTriggeredAt        DateTime?
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+
+  @@index([userId, status])
+  @@index([scheduledEndAt, status])
+  @@map("date_guard_sessions")
+}
+
+model SafetyReport {
+  id             String         @id @default(uuid())
+  reporterId     String
+  reportedUserId String
+  category       ReportCategory
+  reason         String
+  evidenceUrls   String[]       @default([])
+  status         ReportStatus   @default(PENDING)
+  actionTaken    String?
+  resolvedAt     DateTime?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@index([reportedUserId, status])
+  @@index([reporterId])
+  @@map("safety_reports")
+}
+
+// ----------------------------------------------------------------------------
+// Subscriptions & Monetization
+// ----------------------------------------------------------------------------
+
+enum SubscriptionTier {
+  FREE
+  PLUS
+  GOLD
+  PLATINUM
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model UserSubscription {
+  id        String           @id @default(uuid())
+  userId    String           @unique
+  tier      SubscriptionTier @default(FREE)
+  isActive  Boolean          @default(true)
+  startsAt  DateTime         @default(now())
+  expiresAt DateTime
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  invoices BillingInvoice[]
+
+  @@index([userId, isActive])
+  @@map("user_subscriptions")
+}
+
+model BillingInvoice {
+  id                String            @id @default(uuid())
+  subscriptionId    String
+  subscription      UserSubscription  @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  userId            String
+  planName          String
+  amountInr         Int
+  taxInr            Int
+  totalInr          Int
+  paymentMethod     String
+  status            PaymentStatus     @default(COMPLETED)
+  razorpayPaymentId String?
+  paidAt            DateTime          @default(now())
+  pdfInvoiceUrl     String?
+
+  @@index([userId, paidAt])
+  @@map("billing_invoices")
+}
+
+// ----------------------------------------------------------------------------
+// Communities & Passion Circles
+// ----------------------------------------------------------------------------
+
+model CommunityClub {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  description String
+  category    String
+  emoji       String
+  city        String
+  coverImage  String
+  memberCount Int      @default(0)
+  isOfficial  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  posts CommunityPost[]
+
+  @@index([city, category])
+  @@map("community_clubs")
+}
+
+model CommunityPost {
+  id            String        @id @default(uuid())
+  communityId   String
+  community     CommunityClub @relation(fields: [communityId], references: [id], onDelete: Cascade)
+  authorId      String
+  authorName    String
+  authorAvatar  String?
+  title         String
+  content       String
+  upvotesCount  Int           @default(0)
+  commentsCount Int           @default(0)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  comments CommunityComment[]
+
+  @@index([communityId, createdAt])
+  @@map("community_posts")
+}
+
+model CommunityComment {
+  id           String        @id @default(uuid())
+  postId       String
+  post         CommunityPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  authorId     String
+  authorName   String
+  authorAvatar String?
+  content      String
+  createdAt    DateTime      @default(now())
+
+  @@index([postId, createdAt])
+  @@map("community_comments")
+}
+
+// ----------------------------------------------------------------------------
+// WebRTC Calls & Activity Surges
+// ----------------------------------------------------------------------------
+
+enum CallType {
+  VOICE
+  VIDEO
+}
+
+enum CallStatus {
+  INITIATED
+  RINGING
+  CONNECTED
+  DECLINED
+  MISSED
+  ENDED
+}
+
+model CallSession {
+  id              String     @id @default(uuid())
+  callerId        String
+  receiverId      String
+  type            CallType   @default(VOICE)
+  status          CallStatus @default(RINGING)
+  livekitRoomName String
+  startedAt       DateTime?
+  endedAt         DateTime?
+  durationSeconds Int        @default(0)
+  qualityScore    Float?
+  createdAt       DateTime   @default(now())
+
+  @@index([callerId, createdAt])
+  @@index([receiverId, createdAt])
+  @@map("call_sessions")
+}
+
+model ActivitySurgeZone {
+  id               String   @id @default(uuid())
+  name             String
+  city             String
+  latitude         Float
+  longitude        Float
+  radiusMeters     Int
+  activeUsersCount Int      @default(0)
+  surgeMultiplier  Float    @default(1.5)
+  isActive         Boolean  @default(true)
+  surgeReason      String
+  startedAt        DateTime @default(now())
+  expiresAt        DateTime
+
+  @@index([city, isActive])
+  @@map("activity_surge_zones")
+}
+
+model NotificationRecord {
+  id        String   @id @default(uuid())
+  userId    String
+  title     String
+  body      String
+  category  String
+  emoji     String   @default("🔔")
+  actionUrl String?
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId, isRead, createdAt])
+  @@map("notification_records")
+}

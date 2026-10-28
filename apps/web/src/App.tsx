@@ -17,6 +17,10 @@ import { RoomsPage } from './pages/RoomsPage';
 import { EventsPage } from './pages/EventsPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { SafetyPage } from './pages/SafetyPage';
+import { LikesPage } from './pages/LikesPage';
+import { CommunitiesPage } from './pages/CommunitiesPage';
+import { SubscriptionPage } from './pages/SubscriptionPage';
+import { SettingsPage } from './pages/SettingsPage';
 import { AdminPage } from './pages/AdminPage';
 
 const ProtectedLayout: React.FC<{ children: React.ReactNode; requireAdmin?: boolean }> = ({
@@ -132,6 +136,22 @@ export function App() {
             }
           />
           <Route
+            path="/likes"
+            element={
+              <ProtectedLayout>
+                <LikesPage />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="/communities"
+            element={
+              <ProtectedLayout>
+                <CommunitiesPage />
+              </ProtectedLayout>
+            }
+          />
+          <Route
             path="/messages"
             element={
               <ProtectedLayout>
@@ -160,6 +180,22 @@ export function App() {
             element={
               <ProtectedLayout>
                 <ProfilePage />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="/subscription"
+            element={
+              <ProtectedLayout>
+                <SubscriptionPage />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedLayout>
+                <SettingsPage />
               </ProtectedLayout>
             }
           />

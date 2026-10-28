@@ -11,6 +11,11 @@ import { EventsModule } from './modules/events/events.module';
 import { AiModule } from './modules/ai/ai.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { HealthModule } from './modules/health/health.module';
+import { SafetyModule } from './modules/safety/safety.module';
+import { SubscriptionsModule } from './modules/subscriptions/subscriptions.module';
+import { CommunitiesModule } from './modules/communities/communities.module';
+import { SurgeModule } from './modules/surge/surge.module';
+import { NotificationsModule } from './modules/notifications/notifications.module';
 
 @Module({
   imports: [
@@ -25,7 +30,12 @@ import { HealthModule } from './modules/health/health.module';
     EventsModule,
     AiModule,
     AdminModule,
-    HealthModule
+    HealthModule,
+    SafetyModule,
+    SubscriptionsModule,
+    CommunitiesModule,
+    SurgeModule,
+    NotificationsModule
   ]
 })
 export class AppModule {}
